@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-import heroBg from '../assets/banner.jpg';
+import heroBg from '../assets/background.jpeg';
 import heroVideo from '../assets/20260209_1219_New Video_simple_compose_01kh0mam37fjz90gyjrc9xp11q.mp4';
 
 const fadeUp = {
