@@ -3,34 +3,31 @@ import { useNavigate } from 'react-router-dom';
 
 const data = [
   {
-    title: 'Accounts & Taxation',
+    title: 'Service Charge Accounts',
+    desc: 'Specialist accounting for managing agents & property portfolios.',
     items: [
-      { name: 'Accounts and Taxation', path: '/services/accounts-taxation' },
+      { name: 'Service Charge Accounting', path: '/services/service-charge' },
+      { name: 'Property Management Accounts', path: '/services/property' },
+      { name: 'Year-end Reporting', path: '/services/year-end' },
+    ],
+  },
+  {
+    title: 'Business Services',
+    desc: 'Complete support for UK businesses & growth-focused companies.',
+    items: [
+      { name: 'Accounts & Taxation', path: '/services/accounts-taxation' },
       { name: 'Bookkeeping', path: '/services/bookkeeping' },
-      { name: 'Payroll', path: '/services/payroll' },
-      { name: 'VAT', path: '/services/vat' },
-      { name: 'Rental Income and Property Tax', path: '/services/rental-property-tax' },
-      { name: 'Contractors & Freelancers', path: '/services/contractors-freelancers' },
+      { name: 'Payroll & VAT', path: '/services/payroll' },
+      { name: 'Business Advisory', path: '/services/advisory' },
     ],
   },
   {
-    title: 'Business Advisory & Support',
+    title: 'Personal Tax',
+    desc: 'Simple, compliant and stress-free personal tax solutions.',
     items: [
-      { name: 'Business Advisory', path: '/services/business-advisory' },
-      { name: 'Business Startup advice', path: '/services/business-startup' },
-      { name: 'HMRC Investigation/Enquiries', path: '/services/hmrc-enquiries' },
-      { name: 'IR35 Review', path: '/services/ir35-review' },
-      { name: 'International Business', path: '/services/international-business' },
-      { name: 'Company formation', path: '/services/company-formation' },
-    ],
-  },
-  {
-    title: 'Other Services',
-    items: [
-      { name: 'Urgent Deadlines / Same Day services', path: '/services/urgent-deadlines' },
-      { name: 'Registered office and mail forwarding', path: '/services/registered-office' },
-      { name: 'Tax Credits & Allowances', path: '/services/tax-credits' },
-      { name: 'Visa Application', path: '/services/visa' },
+      { name: 'Self Assessment', path: '/services/self-assessment' },
+      { name: 'Rental Income Tax', path: '/services/rental-property-tax' },
+      { name: 'Capital Gains', path: '/services/capital-gains' },
     ],
   },
 ];
@@ -39,35 +36,41 @@ const ShortServices = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="space-y-5 sticky top-24">
+    <div className="space-y-5">
 
       {data.map((section, i) => (
         <div
           key={i}
-          className="bg-white rounded-2xl shadow-sm border border-slate-100 p-4"
+          className="group bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition p-5"
         >
 
           {/* TITLE */}
-          <h3 className="font-bold text-[#0b2b61] mb-3 text-sm">
+          <h3 className="text-[#0b2b61] font-extrabold text-lg">
             {section.title}
           </h3>
 
+          {/* TAGLINE */}
+          <p className="text-xs text-gray-500 mt-1 mb-4 leading-5">
+            {section.desc}
+          </p>
+
           {/* ITEMS */}
-          <ul className="space-y-2 text-xs text-gray-600">
+          <ul className="space-y-2">
 
             {section.items.map((item, j) => (
               <li
                 key={j}
                 onClick={() => navigate(item.path)}
                 className="
-                  cursor-pointer
+                  text-sm text-gray-600
                   hover:text-cyan-600
-                  hover:translate-x-1
+                  cursor-pointer
+                  flex items-center gap-2
                   transition-all duration-200
-                  flex items-center gap-1
+                  hover:translate-x-1
                 "
               >
-                <span className="text-cyan-400">•</span>
+                <span className="text-cyan-400">▹</span>
                 {item.name}
               </li>
             ))}

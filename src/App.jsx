@@ -13,7 +13,6 @@ import VAT from "./pages/services/VAT";
 import RentalIncomePropertyTax from "./pages/services/RentalIncomePropertyTax";
 import ContractorsFreelancers from "./pages/services/ContractorsFreelancers";
 import ServiceChargeAccounting from "./pages/ServiceChargeAccounting";
-import EUBusiness from "./pages/EUBusiness";
 import FreeResources from "./pages/FreeResources";
 import ContactForm from "./pages/ContactForm";
 import HomeServices from "./pages/HomeServices";
@@ -33,7 +32,6 @@ function App() {
           <Route path="/*" element={<NotFound />} />
 
           <Route path="/servicecharge" element={<ServiceChargeAccounting />} />
-          <Route path="/eubusiness" element={<EUBusiness />} />
           <Route path="/freeresources" element={<FreeResources />} />
           <Route path="/contact" element={<ContactForm />} />
 

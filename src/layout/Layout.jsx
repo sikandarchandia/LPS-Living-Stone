@@ -7,36 +7,31 @@ const Layout = ({ children }) => {
   return (
     <div className="bg-[#f6f9ff] min-h-screen w-full">
 
-      <div className="max-w-[1600px] mx-auto px-3 sm:px-4 lg:px-6">
+      <div className="max-w-[1650px] mx-auto px-3 sm:px-5 lg:px-8">
 
-        {/* ================= DESKTOP ONLY STABLE GRID ================= */}
+        {/* ================= DESKTOP ================= */}
         <div className="hidden lg:flex gap-6 py-6">
 
-          {/* LEFT - 20% */}
-          <aside className="w-[20%] shrink-0">
-            <div className="sticky top-24 space-y-4">
+          {/* LEFT - SERVICES */}
+          <aside className="w-[20%]">
+            <div className="sticky top-24 space-y-5">
               <ShortServices />
             </div>
           </aside>
 
-          {/* CENTER - 60% */}
+          {/* CENTER */}
           <main className="w-[60%] min-w-0">
-            <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 lg:p-8">
+            <div className="bg-white rounded-3xl shadow-sm border border-slate-100 p-6 lg:p-10">
               {children}
             </div>
           </main>
 
-          {/* RIGHT - 20% */}
-          <aside className="w-[20%] shrink-0">
+          {/* RIGHT */}
+          <aside className="w-[20%]">
             <div className="sticky top-24 space-y-5">
 
-              <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-4">
-                <Consultation />
-              </div>
-
-              <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-4">
-                <Testimonials />
-              </div>
+              <Consultation />
+              <Testimonials />
 
             </div>
           </aside>
@@ -44,9 +39,9 @@ const Layout = ({ children }) => {
         </div>
 
         {/* ================= TABLET ================= */}
-        <div className="hidden md:block lg:hidden py-6 space-y-5">
+        <div className="hidden md:block lg:hidden py-6 space-y-6">
 
-          <div className="bg-white rounded-2xl shadow-sm border p-5">
+          <div className="bg-white rounded-3xl shadow-sm border p-6">
             {children}
           </div>
 

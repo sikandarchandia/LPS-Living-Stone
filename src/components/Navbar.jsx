@@ -8,14 +8,12 @@ import {
 } from 'lucide-react';
 
 import logo from '../assets/logo.png';
-import icaew from '../assets/icaew.png';
 
 const navLinks = [
   { name: 'HOME', href: '/' },
   { name: 'ABOUT US', href: '/about-us' },
   { name: 'SERVICES', href: '/services' },
   { name: 'SERVICE CHARGE ACCOUNTS', href: '/servicecharge' },
-  { name: 'EU BUSINESS', href: '/eubusiness' },
   { name: 'FREE RESOURCES', href: '/freeresources' },
   { name: 'CONTACT US', href: '/contact' },
 ];
@@ -39,67 +37,6 @@ const Navbar = () => {
     <>
       {/* ================= HEADER ================= */}
       <header className="fixed top-0 left-0 w-full z-[999]">
-
-        {/* ================= TOP BAR ================= */}
-        <div
-          className={`overflow-hidden transition-all duration-700 ${
-            isScrolled
-              ? 'max-h-0 opacity-0'
-              : 'max-h-32 opacity-100'
-          }`}
-        >
-          <div className="relative overflow-hidden border-b border-white/10 bg-gradient-to-r from-[#021126] via-[#0a2c5e] to-[#15408b]">
-
-            {/* PREMIUM GLOWS */}
-            <div className="absolute -top-32 left-[10%] w-[420px] h-[420px] bg-cyan-400/10 rounded-full blur-3xl"></div>
-
-            <div className="absolute -bottom-32 right-[10%] w-[420px] h-[420px] bg-blue-500/10 rounded-full blur-3xl"></div>
-
-            {/* LIGHT */}
-            <div className="absolute inset-0 bg-white/[0.03]"></div>
-
-            <div className="relative max-w-[1450px] mx-auto px-4 lg:px-8 py-3 flex flex-col sm:flex-row items-center justify-between gap-4">
-
-              {/* LEFT */}
-              <div className="flex items-center gap-3 text-white/90">
-              </div>
-
-              {/* RIGHT */}
-              <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-5">
-
-                {/* ICAEW MOBILE FIXED */}
-                <div className="group relative flex items-center rounded-2xl border border-white/10 bg-white px-4 sm:px-5 py-2 shadow-[0_10px_40px_rgba(255,255,255,0.08)] overflow-hidden">
-
-                  {/* Glow */}
-                  <div className="absolute inset-0 bg-cyan-400/10 opacity-0 group-hover:opacity-100 transition duration-500"></div>
-
-                  {/* Shine */}
-                  <div className="absolute top-0 left-[-120%] h-full w-[40%] bg-white/30 rotate-12 blur-md group-hover:left-[150%] transition-all duration-1000"></div>
-
-                  <img
-                    src={icaew}
-                    alt="ICAEW"
-                    className="relative z-10 h-8 sm:h-10 w-auto object-contain"
-                  />
-                </div>
-
-                {/* CLIENT PORTAL */}
-                <button className="group relative overflow-hidden rounded-full border border-white/20 bg-white/5 px-5 py-3 backdrop-blur-xl transition-all duration-500 hover:border-cyan-300/50">
-
-                  {/* Hover */}
-                  <span className="absolute inset-0 scale-x-0 bg-gradient-to-r from-cyan-400/20 to-blue-500/20 origin-left transition-transform duration-500 group-hover:scale-x-100"></span>
-
-                  {/* Shine */}
-                  <span className="absolute top-0 left-[-120%] h-full w-[40%] rotate-12 bg-white/20 blur-md group-hover:left-[150%] transition-all duration-1000"></span>
-
-                  <span className="relative text-[10px] font-bold uppercase tracking-[0.25em] text-white">
-                    Client Portal
-                  </span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
 
         {/* ================= NAVBAR ================= */}
         <motion.nav
