@@ -7,14 +7,14 @@ const Layout = ({ children }) => {
   return (
     <div className="bg-[#f6f9ff] min-h-screen w-full">
 
-      <div className="max-w-[1650px] mx-auto px-3 sm:px-5 lg:px-8">
+      <div className="max-w-[1650px] mx-auto px-2 sm:px-2 lg:px-2">
 
         {/* ================= DESKTOP ================= */}
-        <div className="hidden lg:flex gap-6 py-6">
+        <div className="hidden lg:flex gap-2 py-3">
 
           {/* LEFT - SERVICES */}
           <aside className="w-[20%]">
-            <div className="sticky top-24 space-y-5">
+            <div className="sticky top-14 space-y-2">
               <ShortServices />
             </div>
           </aside>
