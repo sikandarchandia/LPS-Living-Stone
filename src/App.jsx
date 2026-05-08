@@ -18,6 +18,7 @@ import FreeResources from "./pages/FreeResources";
 import ContactForm from "./pages/ContactForm";
 import HomeServices from "./pages/HomeServices";
 import ScrollToTop from "./components/ScrollToTop";
+import NotFound from "./pages/Notfound";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="/" element={<HomeServices />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/*" element={<NotFound />} />
 
           <Route path="/servicecharge" element={<ServiceChargeAccounting />} />
           <Route path="/eubusiness" element={<EUBusiness />} />
