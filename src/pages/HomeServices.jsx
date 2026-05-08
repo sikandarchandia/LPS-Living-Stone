@@ -1,15 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-import img1 from '../assets/home/MTD_LPS-768x549.png';
-import img2 from '../assets/home/xero-certified-advisor.png';
-import img3 from '../assets/home/business.jpg';
-import img4 from '../assets/home/Makeup-1-768x512.jpg';
-import img5 from '../assets/home/landlords.jpg';
-import img6 from '../assets/home/Contractor.jpg';
-import img7 from '../assets/home/business.jpg';
-import img8 from '../assets/home/urgent-delivery.jpg';
-import img9 from '../assets/home/service-charge.jpg';
+import img1 from '../assets/MTD_LPS-768x549.png';
+import img2 from '../assets/xero-certified-advisor.png';
+import img3 from '../assets/business.jpg';
+import img4 from '../assets/Makeup-1-768x512.jpg';
+import img5 from '../assets/landlords.jpg';
+import img6 from '../assets/Contractor.jpg';
+import img7 from '../assets/business.jpg';
+import img8 from '../assets/urgent-delivery.jpg';
+import img9 from '../assets/service-charge.jpg';
 
 const services = [
   { title: 'Small Businesses', img: img1 },
