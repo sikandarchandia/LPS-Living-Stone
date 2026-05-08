@@ -21,14 +21,14 @@ const Layout = ({ children }) => {
 
           {/* CENTER */}
           <main className="w-[60%] min-w-0">
-            <div className="bg-white rounded-3xl shadow-sm border border-slate-100 p-6 lg:p-10">
+            <div className="bg-white border-slate-100">
               {children}
             </div>
           </main>
 
           {/* RIGHT */}
           <aside className="w-[20%]">
-            <div className="sticky top-24 space-y-5">
+            <div className="sticky top-14 space-y-1">
 
               <Consultation />
               <Testimonials />
@@ -39,15 +39,15 @@ const Layout = ({ children }) => {
         </div>
 
         {/* ================= TABLET ================= */}
-        <div className="hidden md:block lg:hidden py-6 space-y-6">
+        <div className="hidden md:block lg:hidden">
 
-          <div className="bg-white rounded-3xl shadow-sm border p-6">
+          <div className="bg-white rounded-3xl shadow-sm border">
             {children}
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-1">
             <ShortServices />
-            <div className="space-y-4">
+            <div className="space-y-1">
               <Consultation />
               <Testimonials />
             </div>
@@ -56,9 +56,9 @@ const Layout = ({ children }) => {
         </div>
 
         {/* ================= MOBILE ================= */}
-        <div className="block md:hidden py-6 space-y-5">
+        <div className="block md:hidden">
 
-          <div className="bg-white rounded-2xl shadow-sm border p-4">
+          <div className="bg-white rounded-2xl shadow-sm border">
             {children}
           </div>
 
