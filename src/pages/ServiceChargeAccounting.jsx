@@ -66,7 +66,9 @@ const ServiceChargeAccounting = () => {
           >
             <img
               src={img}
-              alt="Service Charge Accounting"
+              alt="Service charge accounting illustration showing property financial management"
+              loading="lazy"
+              decoding="async"
               className="rounded-3xl shadow-2xl w-full object-cover h-[420px]"
             />
           </motion.div>
@@ -157,7 +159,10 @@ const ServiceChargeAccounting = () => {
             Speak to our specialists for accurate, compliant and efficient service charge accounting.
           </p>
 
-          <button className="mt-8 group relative overflow-hidden px-9 py-4 rounded-2xl bg-gradient-to-r from-cyan-400 to-blue-600 font-bold">
+          <button
+            aria-label="Book consultation"
+            className="mt-8 group relative overflow-hidden px-9 py-4 rounded-2xl bg-gradient-to-r from-cyan-400 to-blue-600 font-bold"
+          >
 
             <span className="absolute top-0 left-[-120%] w-[40%] h-full bg-white/30 rotate-12 blur-md group-hover:left-[140%] transition-all duration-1000" />
 

@@ -54,10 +54,10 @@ const ScrollToTop = () => {
           transition-all duration-300
         "
       >
-        {/* Glow ring background */}
-        <div className="absolute inset-0 rounded-full blur-md opacity-0 group-hover:opacity-100 bg-cyan-400/20 transition duration-300" />
+        {/* Glow ring background (UPDATED) */}
+        <div className="absolute inset-0 rounded-full blur-md opacity-0 group-hover:opacity-100 bg-[#0D6E4F]/20 transition duration-300" />
 
-        {/* Progress Ring */}
+        {/* Progress Ring (UPDATED COLORS) */}
         <svg className="absolute w-full h-full -rotate-90">
           <circle
             cx="50%"
@@ -71,27 +71,21 @@ const ScrollToTop = () => {
             cx="50%"
             cy="50%"
             r="24"
-            stroke="url(#grad)"
+            stroke="#0D6E4F"
             strokeWidth="3"
             fill="none"
             strokeDasharray="150"
             strokeDashoffset={150 - (150 * progress) / 100}
             strokeLinecap="round"
           />
-          <defs>
-            <linearGradient id="grad">
-              <stop offset="0%" stopColor="#22d3ee" />
-              <stop offset="100%" stopColor="#3b82f6" />
-            </linearGradient>
-          </defs>
         </svg>
 
-        {/* Floating Icon */}
+        {/* Floating Icon (UPDATED HOVER COLOR) */}
         <ArrowUp
           size={20}
           className="
             text-white
-            group-hover:text-cyan-300
+            group-hover:text-[#0D6E4F]
             transition
             relative z-10
             animate-[pulse_2.5s_ease-in-out_infinite]

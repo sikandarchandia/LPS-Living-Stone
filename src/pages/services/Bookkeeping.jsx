@@ -1,19 +1,41 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { CheckCircle2, ArrowRight, Database, FileText, TrendingUp } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import {
+  CheckCircle2,
+  ArrowRight,
+  Database,
+  FileText,
+  TrendingUp,
+} from "lucide-react";
 
-import img from '../../assets/bookkeeping.jpg';
+import img from "../../assets/bookkeeping.jpg";
 
+/* =========================
+   Data
+========================= */
 const benefits = [
-  'Better control of your business finances',
-  'Future financial planning support',
-  'Accurate tax calculation & compliance',
-  'Avoid penalties and overpayment of tax',
-  'Track expenses in real-time',
-  'Know what you are owed and what you owe',
-  'Easier access to loans and credit',
-  'Reduce accounting time and cost',
+  "Better control of your business finances",
+  "Future financial planning support",
+  "Accurate tax calculation & compliance",
+  "Avoid penalties and overpayment of tax",
+  "Track expenses in real-time",
+  "Know what you are owed and what you owe",
+  "Easier access to loans and credit",
+  "Reduce accounting time and cost",
 ];
+
+/* =========================
+   Animation
+========================= */
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  show: { opacity: 1, y: 0 },
+};
+
+const fadeSide = {
+  hidden: { opacity: 0, x: 40 },
+  show: { opacity: 1, x: 0 },
+};
 
 const Bookkeeping = () => {
   return (
@@ -31,11 +53,11 @@ const Bookkeeping = () => {
         <div className="relative max-w-5xl mx-auto px-5 text-center">
 
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            variants={fadeUp}
+            initial="hidden"
+            animate="show"
             transition={{ duration: 0.7 }}
           >
-
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-xl text-xs md:text-sm">
               <Database size={14} />
               Professional Bookkeeping Services
@@ -43,13 +65,15 @@ const Bookkeeping = () => {
 
             <h1 className="mt-6 text-3xl md:text-5xl lg:text-6xl font-black leading-tight">
               Accurate Bookkeeping
-              <span className="block text-cyan-300">For Smarter Business Control</span>
+              <span className="block text-cyan-300">
+                For Smarter Business Control
+              </span>
             </h1>
 
             <p className="mt-5 text-white/70 text-sm md:text-lg leading-7 max-w-3xl mx-auto">
-              Bookkeeping is a statutory requirement for every business. We ensure your financial records are accurate, up-to-date, and fully compliant so you can focus on growing your business.
+              Bookkeeping is a statutory requirement for every business. We ensure
+              your financial records are accurate, up-to-date, and fully compliant.
             </p>
-
           </motion.div>
 
         </div>
@@ -61,27 +85,26 @@ const Bookkeeping = () => {
 
           {/* TEXT */}
           <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            variants={fadeSide}
+            initial="hidden"
+            whileInView="show"
             viewport={{ once: true }}
           >
-
             <h2 className="text-2xl md:text-4xl font-black text-[#0b2b61]">
               Why Bookkeeping Matters
             </h2>
 
             <p className="mt-5 text-gray-600 leading-7 text-sm md:text-base">
-              Bookkeeping is an essential part of record keeping and a legal requirement for all businesses.
-              Although it may feel tedious and time-consuming, accurate records are the foundation of financial success.
+              Bookkeeping is a legal requirement and the foundation of financial success.
+              Without accurate records, business decisions become risky and unclear.
             </p>
 
             <p className="mt-3 text-gray-600 leading-7 text-sm md:text-base">
-              At LPS, we provide affordable bookkeeping services designed to remove the burden from you so you can focus on your core business.
+              We handle your bookkeeping so you can focus on growing your business.
             </p>
 
             {/* BENEFITS */}
             <div className="mt-8 space-y-3">
-
               {benefits.map((item, i) => (
                 <div
                   key={i}
@@ -93,43 +116,38 @@ const Bookkeeping = () => {
                   </span>
                 </div>
               ))}
-
             </div>
-
           </motion.div>
 
           {/* IMAGE */}
           <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            variants={fadeSide}
+            initial="hidden"
+            whileInView="show"
             viewport={{ once: true }}
             className="relative"
           >
-
             <div className="rounded-3xl overflow-hidden shadow-2xl">
               <img
                 src={img}
-                alt="Bookkeeping"
+                alt="Bookkeeping dashboard"
                 className="w-full h-[300px] md:h-[500px] object-cover hover:scale-105 transition duration-700"
               />
             </div>
 
-            {/* Floating badge */}
+            {/* Badge */}
             <div className="absolute -bottom-6 left-6 bg-white/90 backdrop-blur-xl shadow-lg px-4 py-3 rounded-xl flex items-center gap-2 text-sm font-bold">
               <FileText className="text-cyan-500" size={18} />
               Certified Xero Advisors
             </div>
-
           </motion.div>
 
         </div>
       </section>
 
-      {/* ================= XERO SECTION ================= */}
+      {/* ================= XERO ================= */}
       <section className="py-16 md:py-24 bg-white">
-
         <div className="max-w-5xl mx-auto px-5 text-center">
-
           <TrendingUp className="mx-auto text-cyan-500" size={40} />
 
           <h2 className="mt-4 text-2xl md:text-4xl font-black text-[#0b2b61]">
@@ -137,9 +155,9 @@ const Bookkeeping = () => {
           </h2>
 
           <p className="mt-5 text-gray-600 text-sm md:text-base leading-7">
-            We use the latest cloud accounting systems including <b>Xero</b> to streamline bookkeeping, reduce errors, and ensure real-time financial visibility.
+            We use cloud accounting tools like <b>Xero</b> to ensure accuracy,
+            automation, and real-time financial visibility.
           </p>
-
         </div>
       </section>
 

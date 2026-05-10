@@ -32,17 +32,17 @@ const Testimonials = () => {
   const t = data[index];
 
   return (
-    <div className="max-w-4xl mx-auto mt-10 bg-white p-6 rounded-2xl shadow text-center">
+    <div className="max-w-4xl mx-auto mt-10 bg-white p-6 rounded-2xl shadow border border-[#E5E7EB] text-center">
 
-      <p className="text-gray-600 text-sm italic">
+      <p className="text-[#6B7280] text-sm italic">
         "{t.text}"
       </p>
 
-      <h4 className="mt-4 font-bold text-[#0b2b61]">
+      <h4 className="mt-4 font-bold text-[#0D2340]">
         {t.name}
       </h4>
 
-      <p className="text-xs text-gray-500">
+      <p className="text-xs text-[#6B7280]">
         {t.role}
       </p>
 

@@ -46,10 +46,14 @@ The purpose of CIS is to reduce tax evasion in the construction industry and ens
 const ContractorsFreelancers = () => {
   const [active, setActive] = useState(0);
 
+  const toggle = (index) => {
+    setActive((prev) => (prev === index ? -1 : index));
+  };
+
   return (
     <div className="bg-[#f6f9ff] overflow-hidden">
 
-      {/* ================= HERO ================= */}
+      {/* HERO */}
       <section className="relative py-24 text-white overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#04152d] via-[#0d2f68] to-[#0a3d91]" />
 
@@ -64,19 +68,17 @@ const ContractorsFreelancers = () => {
         </div>
       </section>
 
-      {/* ================= OUTSIDE INTRO ================= */}
+      {/* INTRO */}
       <section className="py-10 md:py-14 bg-white">
         <div className="max-w-5xl mx-auto px-6 text-gray-700 text-sm md:text-base leading-7">
-
           <p>
-            Either you are an experienced contractor or freelancer or thinking to become one,
-            it is of prime importance to select the appropriate business structure to maximise tax efficiency.
+            Whether you are an experienced contractor or freelancer or thinking to become one,
+            it is important to select the appropriate business structure to maximise tax efficiency.
           </p>
-
         </div>
       </section>
 
-      {/* ================= CENTER ACCORDION SECTION ================= */}
+      {/* ACCORDION */}
       <section className="pb-16 md:pb-24">
         <div className="max-w-5xl mx-auto px-5 space-y-5">
 
@@ -84,16 +86,14 @@ const ContractorsFreelancers = () => {
             const isOpen = active === i;
 
             return (
-              <motion.div
+              <div
                 key={i}
-                layout
-                className="rounded-3xl border border-slate-200 bg-white shadow-[0_10px_40px_rgba(0,0,0,0.06)] overflow-hidden"
+                className="rounded-3xl border border-slate-200 bg-white shadow-sm overflow-hidden"
               >
 
-                {/* HEADER */}
                 <button
-                  onClick={() => setActive(isOpen ? -1 : i)}
-                  className="w-full flex items-center justify-between p-6 md:p-7 text-left"
+                  onClick={() => toggle(i)}
+                  className="w-full flex items-center justify-between p-6 md:p-7 text-left hover:bg-slate-50 transition"
                 >
                   <div>
                     <h3 className="text-lg md:text-xl font-bold text-[#0b2b61]">
@@ -111,14 +111,13 @@ const ContractorsFreelancers = () => {
                   />
                 </button>
 
-                {/* BODY */}
                 <AnimatePresence initial={false}>
                   {isOpen && (
                     <motion.div
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: 'auto', opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.35 }}
+                      transition={{ duration: 0.3 }}
                       className="overflow-hidden"
                     >
                       <div className="px-6 pb-6 md:px-7 md:pb-7 text-sm md:text-base text-slate-700 leading-7 whitespace-pre-line">
@@ -128,14 +127,14 @@ const ContractorsFreelancers = () => {
                   )}
                 </AnimatePresence>
 
-              </motion.div>
+              </div>
             );
           })}
 
         </div>
       </section>
 
-      {/* ================= AFTER CONTENT ================= */}
+      {/* INFO SECTION */}
       <section className="py-14 md:py-20 bg-white border-t">
         <div className="max-w-5xl mx-auto px-6 space-y-10 text-gray-700 text-sm md:text-base leading-7">
 
@@ -144,11 +143,7 @@ const ContractorsFreelancers = () => {
               Business Structure Guidance
             </h3>
 
-            <p>
-              Depending on individual circumstances, one of the following structures may be more suitable:
-            </p>
-
-            <ul className="list-disc pl-5 mt-3 space-y-1">
+            <ul className="list-disc pl-5 space-y-1">
               <li>Self Employed</li>
               <li>Partnership</li>
               <li>Umbrella Company</li>
@@ -158,7 +153,7 @@ const ContractorsFreelancers = () => {
 
           <div>
             <h3 className="font-bold text-[#0b2b61] text-lg mb-2">
-              Our Contractors & Freelancers Clients Include
+              Our Clients Include
             </h3>
 
             <ul className="list-disc pl-5 space-y-1">
@@ -166,7 +161,6 @@ const ContractorsFreelancers = () => {
               <li>Teachers and Trainers</li>
               <li>IT Specialists</li>
               <li>Locum Doctors</li>
-              <li>Medical Consultants</li>
               <li>Management Consultants</li>
               <li>Builders</li>
               <li>Uber Drivers</li>
@@ -175,14 +169,14 @@ const ContractorsFreelancers = () => {
 
           <div className="bg-slate-50 p-5 rounded-2xl border">
             <p>
-              For more details of the services we offer, call <b>020 7278 0007</b> or book a FREE no-obligation consultation with one of our qualified accountants.
+              Call <b>020 7278 0007</b> or book a FREE consultation with our accountants.
             </p>
           </div>
 
         </div>
       </section>
 
-      {/* ================= CTA ================= */}
+      {/* CTA */}
       <section className="relative py-20 text-white">
         <div className="absolute inset-0 bg-gradient-to-r from-[#04142d] to-[#0a3d91]" />
 

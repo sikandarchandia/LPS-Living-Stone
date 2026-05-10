@@ -17,7 +17,7 @@ const Payroll = () => {
   return (
     <div className="bg-[#f5f8ff] overflow-hidden">
 
-      {/* ================= HERO ================= */}
+      {/* HERO */}
       <section className="relative py-24 md:py-32 text-white overflow-hidden">
 
         <div className="absolute inset-0 bg-gradient-to-br from-[#04152d] via-[#0d2f68] to-[#0a3d91]" />
@@ -54,7 +54,7 @@ const Payroll = () => {
         </div>
       </section>
 
-      {/* ================= CONTENT ================= */}
+      {/* CONTENT */}
       <section className="py-16 md:py-28">
         <div className="max-w-7xl mx-auto px-5 grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
@@ -89,7 +89,7 @@ const Payroll = () => {
               {services.map((item, i) => (
                 <div
                   key={i}
-                  className="flex items-start gap-3 p-4 bg-white rounded-xl border shadow-sm"
+                  className="flex items-start gap-3 p-4 bg-white rounded-xl border shadow-sm hover:shadow-md transition"
                 >
                   <CheckCircle2 className="text-cyan-500 mt-1" size={18} />
                   <span className="text-slate-700 text-sm md:text-base font-medium">
@@ -118,7 +118,7 @@ const Payroll = () => {
               />
             </div>
 
-            {/* Floating badge */}
+            {/* Badge */}
             <div className="absolute -bottom-6 left-6 bg-white/90 backdrop-blur-xl shadow-lg px-4 py-3 rounded-xl flex items-center gap-2 text-sm font-bold">
               <ShieldCheck className="text-cyan-500" size={18} />
               HMRC RTI Compliant
@@ -129,9 +129,8 @@ const Payroll = () => {
         </div>
       </section>
 
-      {/* ================= PENSION ================= */}
+      {/* PENSION */}
       <section className="py-16 md:py-24 bg-white">
-
         <div className="max-w-5xl mx-auto px-5 text-center">
 
           <h2 className="text-2xl md:text-4xl font-black text-[#0b2b61]">
@@ -146,7 +145,7 @@ const Payroll = () => {
         </div>
       </section>
 
-      {/* ================= CTA ================= */}
+      {/* CTA */}
       <section className="relative py-20 md:py-28 overflow-hidden">
 
         <div className="absolute inset-0 bg-gradient-to-r from-[#04142d] to-[#0a3d91]" />

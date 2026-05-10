@@ -41,16 +41,16 @@ const ShortServices = () => {
       {data.map((section, i) => (
         <div
           key={i}
-          className="group bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition p-5"
+          className="group bg-white rounded-3xl border border-[#E5E7EB] shadow-sm hover:shadow-xl transition p-5"
         >
 
           {/* TITLE */}
-          <h3 className="text-[#0b2b61] font-extrabold text-lg">
+          <h3 className="text-[#0D2340] font-extrabold text-lg">
             {section.title}
           </h3>
 
           {/* TAGLINE */}
-          <p className="text-xs text-gray-500 mt-1 mb-4 leading-5">
+          <p className="text-xs text-[#6B7280] mt-1 mb-4 leading-5">
             {section.desc}
           </p>
 
@@ -62,15 +62,15 @@ const ShortServices = () => {
                 key={j}
                 onClick={() => navigate(item.path)}
                 className="
-                  text-sm text-gray-600
-                  hover:text-cyan-600
+                  text-sm text-[#6B7280]
+                  hover:text-[#0D6E4F]
                   cursor-pointer
                   flex items-center gap-2
                   transition-all duration-200
                   hover:translate-x-1
                 "
               >
-                <span className="text-cyan-400">▹</span>
+                <span className="text-[#0D6E4F]">▹</span>
                 {item.name}
               </li>
             ))}

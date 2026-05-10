@@ -3,11 +3,11 @@ import { motion } from 'framer-motion';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#04152d] text-white relative overflow-hidden">
+    <footer className="bg-[#0D2340] text-white relative overflow-hidden">
 
-      {/* glow (reduced intensity) */}
-      <div className="absolute top-[-140px] left-[-140px] w-[220px] h-[220px] bg-cyan-400/10 blur-3xl rounded-full" />
-      <div className="absolute bottom-[-140px] right-[-140px] w-[220px] h-[220px] bg-blue-500/10 blur-3xl rounded-full" />
+      {/* glow (updated to new scheme) */}
+      <div className="absolute top-[-140px] left-[-140px] w-[220px] h-[220px] bg-[#0D6E4F]/20 blur-3xl rounded-full" />
+      <div className="absolute bottom-[-140px] right-[-140px] w-[220px] h-[220px] bg-[#0D6E4F]/20 blur-3xl rounded-full" />
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
 
@@ -35,7 +35,7 @@ const Footer = () => {
                 <li key={i}>
                   <a
                     href="#"
-                    className="hover:text-cyan-300 transition"
+                    className="hover:text-[#0D6E4F] transition"
                   >
                     {item}
                   </a>
@@ -64,7 +64,7 @@ const Footer = () => {
                 WD18 9AB
               </p>
 
-              <p className="text-cyan-300 font-medium">
+              <p className="text-[#0D6E4F] font-medium">
                 020 7278 0007
               </p>
 
@@ -73,7 +73,6 @@ const Footer = () => {
           </div>
 
         </div>
-
 
         {/* ================= COPYRIGHT ================= */}
         <div className="mt-6 pt-3 border-t border-white/10 text-center text-[10px] text-white/40">

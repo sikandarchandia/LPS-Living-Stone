@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle2, ArrowRight, Receipt, TrendingUp, ShieldCheck } from 'lucide-react';
 
-import logo1 from '../../assets/LPS_VAT.jpg';
+import vatImage from '../../assets/LPS_VAT.jpg';
 
 const schemes = [
   'Cash basis accounting',
@@ -17,12 +17,11 @@ const VAT = () => {
   return (
     <div className="bg-[#f5f8ff] overflow-hidden">
 
-      {/* ================= HERO ================= */}
+      {/* HERO */}
       <section className="relative py-24 md:py-32 text-white overflow-hidden">
 
         <div className="absolute inset-0 bg-gradient-to-br from-[#04152d] via-[#0d2f68] to-[#0a3d91]" />
 
-        {/* Glow */}
         <div className="absolute top-[-120px] left-[-120px] w-[400px] h-[400px] bg-cyan-400/20 blur-[120px] rounded-full" />
         <div className="absolute bottom-[-120px] right-[-120px] w-[450px] h-[450px] bg-blue-500/20 blur-[140px] rounded-full" />
 
@@ -45,7 +44,7 @@ const VAT = () => {
             </h1>
 
             <p className="mt-5 text-white/70 text-sm md:text-lg leading-7 max-w-3xl mx-auto">
-              VAT is often seen as an additional tax burden, but in many cases, being VAT registered can actually benefit your business financially and operationally.
+              VAT registration and compliance made simple — we help you stay compliant while optimizing tax efficiency.
             </p>
 
           </motion.div>
@@ -53,7 +52,7 @@ const VAT = () => {
         </div>
       </section>
 
-      {/* ================= CONTENT ================= */}
+      {/* CONTENT */}
       <section className="py-16 md:py-28">
         <div className="max-w-7xl mx-auto px-5 grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
@@ -74,12 +73,12 @@ const VAT = () => {
             </h2>
 
             <p className="mt-5 text-gray-600 text-sm md:text-base leading-7">
-              Businesses with taxable turnover exceeding the VAT threshold (£85,000 as of 2017) are legally required to register for VAT.
-              However, voluntary registration may also be beneficial depending on your business structure.
+              Businesses exceeding the VAT threshold (£85,000) must register for VAT.
+              Voluntary registration can also benefit cash flow and credibility.
             </p>
 
             <p className="mt-3 text-gray-600 text-sm md:text-base leading-7">
-              At LPS Accountants, we help you understand whether VAT registration is right for you and ensure full HMRC compliance.
+              We ensure full HMRC compliance and guide you through the most suitable VAT structure.
             </p>
 
             {/* SCHEMES */}
@@ -101,24 +100,24 @@ const VAT = () => {
 
           </motion.div>
 
-          {/* LOGOS */}
+          {/* IMAGE */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="relative space-y-8"
+            className="relative"
           >
 
-            <div className="rounded-3xl overflow-hidden shadow-2xl">
+            <div className="rounded-3xl overflow-hidden shadow-2xl bg-white p-8">
               <img
-                src={logo1}
-                alt="VAT Logo 1"
-                className="w-full h-[250px] md:h-[400px] object-contain bg-white p-10 hover:scale-105 transition"
+                src={vatImage}
+                alt="VAT Services"
+                className="w-full h-[300px] md:h-[450px] object-contain hover:scale-105 transition duration-700"
               />
             </div>
 
-            {/* Badge */}
-            <div className="absolute -bottom-6 left-6 bg-white/90 backdrop-blur-xl shadow-lg px-4 py-3 rounded-xl flex items-center gap-2 text-sm font-bold">
+            {/* BADGE */}
+            <div className="absolute -bottom-5 left-6 bg-white/90 backdrop-blur-xl shadow-lg px-4 py-3 rounded-xl flex items-center gap-2 text-sm font-bold">
               <ShieldCheck className="text-cyan-500" size={18} />
               HMRC VAT Experts
             </div>
@@ -128,7 +127,7 @@ const VAT = () => {
         </div>
       </section>
 
-      {/* ================= INFO ================= */}
+      {/* INFO */}
       <section className="py-16 md:py-24 bg-white">
 
         <div className="max-w-5xl mx-auto px-5 text-center">
@@ -138,14 +137,14 @@ const VAT = () => {
           </h2>
 
           <p className="mt-5 text-gray-600 text-sm md:text-base leading-7">
-            Selecting the right VAT scheme can significantly impact your cash flow and tax efficiency.
-            We guide you through all available options to ensure the best fit for your business.
+            The correct VAT scheme can improve cash flow and reduce administrative burden.
+            We help you choose the best option for your business.
           </p>
 
         </div>
       </section>
 
-      {/* ================= CTA ================= */}
+      {/* CTA */}
       <section className="relative py-20 md:py-28 overflow-hidden">
 
         <div className="absolute inset-0 bg-gradient-to-r from-[#04142d] to-[#0a3d91]" />
@@ -157,7 +156,7 @@ const VAT = () => {
           </h2>
 
           <p className="mt-5 text-white/70 text-sm md:text-base">
-            Speak to our experts today and ensure your VAT compliance is handled correctly from day one.
+            Get expert VAT support and stay fully compliant from day one.
           </p>
 
           <button className="mt-8 group relative overflow-hidden px-8 md:px-10 py-4 md:py-5 rounded-2xl bg-gradient-to-r from-cyan-400 to-blue-600 font-bold w-full sm:w-auto">
