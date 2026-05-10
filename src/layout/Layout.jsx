@@ -1,6 +1,5 @@
 import React from 'react';
 import ShortServices from './ShortServices';
-import Testimonials from './Testimonials';
 
 const Layout = ({ children }) => {
   return (
@@ -19,20 +18,11 @@ const Layout = ({ children }) => {
           </aside>
 
           {/* CENTER */}
-          <main className="w-[60%] min-w-0">
+          <main className="w-[80%] min-w-0">
             <div className="bg-white border border-[#E5E7EB]">
               {children}
             </div>
           </main>
-
-          {/* RIGHT */}
-          <aside className="w-[20%]">
-            <div className="sticky top-14 space-y-1">
-              <Testimonials />
-
-            </div>
-          </aside>
-
         </div>
 
         {/* ================= TABLET ================= */}
@@ -45,7 +35,6 @@ const Layout = ({ children }) => {
           <div className="grid grid-cols-2 gap-1">
             <ShortServices />
             <div className="space-y-1">
-              <Testimonials />
             </div>
           </div>
 
@@ -59,7 +48,6 @@ const Layout = ({ children }) => {
           </div>
 
           <ShortServices />
-          <Testimonials />
 
         </div>
 
