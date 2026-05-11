@@ -38,21 +38,21 @@ const Navbar = () => {
           className={`
             transition-all duration-500 border-b
             ${isScrolled
-              ? 'bg-white/95 backdrop-blur-2xl shadow-lg border-[#E5E7EB] py-3'
-              : 'bg-white py-5 border-transparent'
+              ? 'bg-[#ECE5DD]/80 backdrop-blur-xl shadow-md border-[#E5E7EB] py-3'
+              : 'bg-[#ECE5DD] py-5 border-transparent'
             }
           `}
         >
 
-          {/* subtle premium glow */}
+          {/* glow */}
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
-            <div className="absolute top-[-100px] left-[10%] w-60 h-60 bg-[#0D6E4F]/10 blur-3xl rounded-full" />
-            <div className="absolute bottom-[-100px] right-[10%] w-60 h-60 bg-[#0D2040]/10 blur-3xl rounded-full" />
+            <div className="absolute top-[-100px] left-[10%] w-72 h-72 bg-[#0D6E4F]/10 blur-3xl rounded-full" />
+            <div className="absolute bottom-[-100px] right-[10%] w-72 h-72 bg-[#0D6E4F]/10 blur-3xl rounded-full" />
           </div>
 
           <div className="relative max-w-[1500px] mx-auto px-6 flex items-center justify-between">
 
-            {/* LOGO + BRAND */}
+            {/* LOGO */}
             <a href="/" className="flex items-center gap-4">
 
               <img
@@ -64,10 +64,10 @@ const Navbar = () => {
               />
 
               <div className="leading-tight">
-                <h1 className="text-[#0D2040] font-black text-lg sm:text-xl tracking-wide">
+                <h1 className="text-[#0D2040] font-black text-xl sm:text-2xl tracking-wide">
                   Living Stone
                 </h1>
-                <p className="text-[#0D6E4F] text-[11px] sm:text-xs font-semibold tracking-[0.2em] uppercase">
+                <p className="text-[#0D6E4F] text-xs font-semibold tracking-[0.25em] uppercase">
                   Chartered Accountants
                 </p>
               </div>
@@ -75,7 +75,7 @@ const Navbar = () => {
             </a>
 
             {/* DESKTOP NAV */}
-            <div className="hidden lg:flex items-center gap-1">
+            <div className="hidden lg:flex items-center gap-2">
 
               {navLinks.map((link, i) => (
                 <a
@@ -85,16 +85,12 @@ const Navbar = () => {
                     relative px-4 py-2 text-[12px] font-semibold tracking-wide
                     text-[#0D2040]
                     hover:text-[#0D6E4F]
-                    rounded-lg
                     transition-all duration-300
-                    group overflow-hidden
+                    group
                   "
                 >
                   <span className="absolute left-4 bottom-1 w-0 h-[2px] bg-[#0D6E4F] group-hover:w-[calc(100%-32px)] transition-all duration-300 rounded-full" />
-
-                  <span className="relative z-10">
-                    {link.name}
-                  </span>
+                  {link.name}
                 </a>
               ))}
 
@@ -105,11 +101,13 @@ const Navbar = () => {
               <a
                 href="/contact"
                 className="
-                  px-5 py-2.5 rounded-xl
+                  px-6 py-2.5 rounded-xl
                   bg-[#0D6E4F]
-                  hover:bg-[#0b5c42]
                   text-white text-[12px] font-semibold
-                  shadow-md hover:shadow-xl
+                  shadow-md
+                  hover:bg-[#0B5C42]
+                  hover:shadow-xl
+                  hover:scale-[1.03]
                   transition-all duration-300
                 "
               >
@@ -120,7 +118,7 @@ const Navbar = () => {
             {/* MOBILE */}
             <button
               onClick={() => setMobileOpen(true)}
-              className="lg:hidden p-2 rounded-lg bg-[#0D6E4F] text-white transition-all duration-300"
+              className="lg:hidden p-2 rounded-lg bg-[#0D6E4F] text-white hover:bg-[#0B5C42] transition"
             >
               <Menu size={22} />
             </button>
@@ -136,20 +134,19 @@ const Navbar = () => {
             initial={{ x: '100%' }}
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
-            transition={{ duration: 0.4 }}
-            className="fixed inset-0 z-[1000] bg-white"
+            transition={{ duration: 0.35 }}
+            className="fixed inset-0 z-[1000] bg-[#ECE5DD]"
           >
 
-            {/* top */}
-            <div className="flex items-center justify-between px-5 py-5 border-b border-[#E5E7EB]">
+            <div className="flex items-center justify-between px-5 py-5 border-b border-[#D9D9D9]">
 
               <div className="flex items-center gap-3">
-                <img src={logo} className="h-12" />
-                <div className="leading-tight">
+                <img src={logo} className="h-14" />
+                <div>
                   <h1 className="text-[#0D2040] font-bold text-sm">
                     Living Stone
                   </h1>
-                  <p className="text-[#0D6E4F] text-[10px] uppercase tracking-[0.15em]">
+                  <p className="text-[#0D6E4F] text-[10px] uppercase tracking-[0.2em]">
                     Chartered Accountants
                   </p>
                 </div>
@@ -164,7 +161,6 @@ const Navbar = () => {
 
             </div>
 
-            {/* links */}
             <div className="px-5 py-8 space-y-3">
 
               {navLinks.map((link, i) => (
@@ -175,22 +171,20 @@ const Navbar = () => {
                   className="
                     flex items-center justify-between
                     px-5 py-4 rounded-xl
-                    bg-[#F5F7FA]
+                    bg-white/80 backdrop-blur
                     hover:bg-[#EAF5F0]
-                    border border-[#E5E7EB]
+                    border border-[#D9D9D9]
                     text-[#0D2040] text-sm font-semibold
                     transition-all duration-300
                   "
                 >
                   <span>{link.name}</span>
-
                   <ChevronRight size={18} className="text-[#0D6E4F]" />
                 </a>
               ))}
 
             </div>
 
-            {/* mobile CTA */}
             <div className="px-5 pb-8">
               <a
                 href="/contact"
@@ -199,7 +193,7 @@ const Navbar = () => {
                   flex items-center justify-center
                   w-full py-4 rounded-xl
                   bg-[#0D6E4F]
-                  hover:bg-[#0b5c42]
+                  hover:bg-[#0B5C42]
                   text-white text-sm font-semibold
                   transition-all duration-300
                 "
@@ -212,7 +206,7 @@ const Navbar = () => {
         )}
       </AnimatePresence>
 
-      <div className="h-[90px]" />
+      <div className="h-[95px]" />
     </>
   );
 };

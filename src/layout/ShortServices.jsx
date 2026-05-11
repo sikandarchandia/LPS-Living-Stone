@@ -50,11 +50,11 @@ const ShortServices = () => {
             rounded-3xl
             overflow-hidden
             border border-[#E5E7EB]
-            bg-white
+            bg-[#ECE5DD]
             shadow-sm
             transition-all duration-500
             hover:-translate-y-2
-            hover:shadow-[0_20px_50px_-20px_rgba(13,110,79,0.20)]
+            hover:shadow-[0_25px_60px_-25px_rgba(13,110,79,0.25)]
           "
         >
 
@@ -63,8 +63,8 @@ const ShortServices = () => {
 
           {/* soft glow accents */}
           <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute -top-10 -right-10 w-28 h-28 bg-[#0D6E4F]/5 blur-2xl opacity-0 group-hover:opacity-100 transition" />
-            <div className="absolute bottom-[-40px] left-[-40px] w-36 h-36 bg-[#0D2040]/5 blur-2xl opacity-0 group-hover:opacity-100 transition" />
+            <div className="absolute -top-10 -right-10 w-28 h-28 bg-[#0D6E4F]/10 blur-2xl opacity-0 group-hover:opacity-100 transition" />
+            <div className="absolute bottom-[-40px] left-[-40px] w-36 h-36 bg-[#0D2040]/10 blur-2xl opacity-0 group-hover:opacity-100 transition" />
           </div>
 
           {/* CONTENT */}
@@ -82,7 +82,7 @@ const ShortServices = () => {
             </h3>
 
             {/* DESC */}
-            <p className="mt-2 text-xs text-[#6B7280] leading-5">
+            <p className="mt-2 text-xs text-[#0D2040]/70 leading-5">
               {section.desc}
             </p>
 
@@ -95,8 +95,8 @@ const ShortServices = () => {
                   className="
                     flex items-center justify-between
                     px-3 py-2 rounded-xl
-                    bg-[#F9FAFB]
-                    hover:bg-[#F0FAF5]
+                    bg-white/60
+                    hover:bg-[#0D6E4F]/10
                     transition-all duration-300
                     group/item
                   "

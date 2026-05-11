@@ -19,12 +19,11 @@ const stats = [
 
 const HomeServices = () => {
   return (
-    <section className="w-full bg-[#F5F7FA] overflow-hidden">
+    <section className="w-full bg-[#ECE5DD] overflow-hidden font-['Neogrotesk']">
 
       {/* ================= HERO ================= */}
       <div className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
 
-        {/* Video Background */}
         <video
           src={heroVideo}
           autoPlay
@@ -34,12 +33,11 @@ const HomeServices = () => {
           className="absolute inset-0 w-full h-full object-cover scale-105"
         />
 
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-[#071A2B]/30" />
+        <div className="absolute inset-0 bg-[#071A2B]/40" />
 
-        {/* Glow effects */}
-        <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-[#0D6E4F]/20 blur-3xl rounded-full" />
-        <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-[#0D6E4F]/25 blur-3xl rounded-full" />
+        {/* Glow */}
+        <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-[#0D6E4F]/25 blur-3xl rounded-full" />
+        <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-[#0D6E4F]/30 blur-3xl rounded-full" />
 
         {/* CONTENT */}
         <motion.div
@@ -58,7 +56,7 @@ const HomeServices = () => {
 
           <motion.div
             variants={fadeUp}
-            className="mt-4 inline-block px-4 py-2 bg-[#0D6E4F]/40 rounded-lg border border-[#0D6E4F]/60"
+            className="mt-4 inline-block px-5 py-2.5 bg-[#0D6E4F]/50 rounded-lg border border-[#0D6E4F]/70"
           >
             <h2 className="text-white text-xl sm:text-3xl font-semibold">
               for UK Businesses & Individuals
@@ -74,38 +72,35 @@ const HomeServices = () => {
             across the UK.
           </motion.p>
 
-          {/* ================= BUTTONS (FIXED ROUTING) ================= */}
+          {/* BUTTONS */}
           <motion.div
             variants={fadeUp}
             className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
           >
-            {/* CONTACT ROUTE */}
             <Link
               to="/contact"
               className="
                 px-9 py-3.5 rounded-xl
                 bg-[#0D6E4F]
                 text-white font-semibold
-                hover:bg-[#0b5c42]
+                hover:bg-white hover:text-[#0D6E4F]
                 transition
-                text-center
+                border border-transparent hover:border-[#0D6E4F]
               "
             >
               Book Consultation
             </Link>
 
-            {/* SERVICES ROUTE */}
             <Link
               to="/services"
               className="
                 px-9 py-3.5 rounded-xl
-                border border-white/25
+                border border-white/40
                 text-white
-                bg-white/5
-                hover:bg-white/10
+                bg-white/10
+                hover:bg-white hover:text-[#0D6E4F]
                 backdrop-blur-sm
                 transition
-                text-center
               "
             >
               Explore Services
@@ -116,7 +111,7 @@ const HomeServices = () => {
       </div>
 
       {/* ================= STATS ================= */}
-      <section className="py-14 bg-white border-b border-[#E5E7EB]">
+      <section className="py-14 bg-[#ECE5DD] border-b border-black/10">
         <div className="max-w-6xl mx-auto px-5 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
 
           {stats.map((s, i) => (
@@ -132,13 +127,11 @@ const HomeServices = () => {
                 hover:bg-white hover:shadow-2xl hover:-translate-y-1
               "
             >
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-[radial-gradient(circle_at_top,rgba(13,110,79,0.08),transparent_60%)]" />
-
-              <h3 className="relative text-3xl font-black text-white group-hover:text-[#0D6E4F] transition">
+              <h3 className="text-3xl font-black text-white group-hover:text-[#0D6E4F] transition">
                 {s.value}
               </h3>
 
-              <p className="relative mt-2 text-sm text-white/80 group-hover:text-[#0D2040] transition">
+              <p className="mt-2 text-sm text-white/80 group-hover:text-[#0D2040] transition">
                 {s.label}
               </p>
             </div>
@@ -148,7 +141,7 @@ const HomeServices = () => {
       </section>
 
       {/* ================= ABOUT ================= */}
-      <section className="py-16 md:py-20">
+      <section className="py-16 md:py-20 bg-[#ECE5DD]">
         <div className="max-w-6xl mx-auto px-5 grid md:grid-cols-2 gap-12 items-center">
 
           <div>
@@ -161,7 +154,7 @@ const HomeServices = () => {
               A Modern Approach to Accounting
             </h2>
 
-            <p className="mt-5 text-[#6B7280] leading-7 text-base">
+            <p className="mt-5 text-[#0D2040]/80 leading-7">
               Professional accounting, taxation and advisory services designed
               for long-term growth and compliance.
             </p>
@@ -186,7 +179,7 @@ const HomeServices = () => {
             </div>
           </div>
 
-          <div className="rounded-3xl bg-white border border-[#E5E7EB] shadow-xl overflow-hidden">
+          <div className="rounded-3xl bg-white border border-black/10 shadow-xl overflow-hidden">
 
             <video
               src={heroVideo}
@@ -203,7 +196,7 @@ const HomeServices = () => {
                 Professional Advisory in Practice
               </h3>
 
-              <p className="text-sm text-[#6B7280] mt-3">
+              <p className="text-sm text-[#0D2040]/70 mt-3">
                 Clear reporting, proactive advice, and compliance-first accounting support.
               </p>
             </div>

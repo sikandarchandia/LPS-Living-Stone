@@ -18,94 +18,82 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="relative bg-white py-28 overflow-hidden">
+    <div className="relative overflow-hidden py-28 bg-gradient-to-br from-[#0D6E4F] via-[#0b5c42] to-[#064635]">
 
-      {/* soft premium glow */}
-      <div className="absolute top-[-180px] left-[-160px] w-[520px] h-[520px] bg-[#0D6E4F]/5 blur-3xl rounded-full" />
-      <div className="absolute bottom-[-180px] right-[-160px] w-[520px] h-[520px] bg-[#0D2040]/5 blur-3xl rounded-full" />
+      {/* glow */}
+      <div className="absolute top-[-180px] left-[-160px] w-[520px] h-[520px] bg-white/10 blur-3xl rounded-full" />
+      <div className="absolute bottom-[-180px] right-[-160px] w-[520px] h-[520px] bg-white/5 blur-3xl rounded-full" />
 
       <div className="relative max-w-6xl mx-auto px-6">
 
-        {/* ================= HEADER ================= */}
-        <div className="text-center mb-16">
+        {/* HEADER */}
+        <div className="text-center mb-16 text-white">
 
-          <div className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white border border-[#E5E7EB] text-[#0D6E4F] text-xs uppercase tracking-[0.25em] shadow-sm">
+          <div className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white/10 border border-white/20 text-white text-xs uppercase tracking-[0.25em] backdrop-blur-xl">
             <Sparkles size={14} />
             Get in Touch
           </div>
 
-          <h2 className="mt-6 text-4xl md:text-6xl font-black text-[#0D2040]">
+          <h2 className="mt-6 text-4xl md:text-6xl font-black">
             Contact Our Experts
           </h2>
 
-          <p className="mt-5 text-lg md:text-xl text-[#6B7280] max-w-2xl mx-auto leading-8">
+          <p className="mt-5 text-white/80 text-lg md:text-xl max-w-2xl mx-auto">
             Fill out the form and our team will respond with professional guidance tailored to your business.
           </p>
 
         </div>
 
-        {/* ================= MAIN GRID ================= */}
+        {/* GRID */}
         <div className="grid lg:grid-cols-3 gap-12">
 
-          {/* LEFT PANEL */}
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            className="lg:col-span-1 space-y-6"
-          >
+          {/* LEFT */}
+          <motion.div className="space-y-6">
 
-            {/* INFO CARD */}
-            <div className="bg-white rounded-3xl p-7 shadow-sm border border-[#E5E7EB]">
+            {/* INFO */}
+            <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-7 border border-white/20 text-white hover:scale-[1.02] transition">
 
-              <h3 className="text-2xl font-black text-[#0D2040]">
-                LPS Livingstone
-              </h3>
+              <h3 className="text-2xl font-black">LPS Livingstone</h3>
 
-              <div className="mt-6 space-y-5 text-base text-[#6B7280]">
+              <div className="mt-6 space-y-5 text-white/80">
 
                 <div className="flex gap-3">
-                  <MapPin className="text-[#0D6E4F]" />
-                  <p>
-                    Wenzel House<br />
-                    Olds Approach, Tolpits Lane<br />
-                    WD18 9AB
-                  </p>
+                  <MapPin className="text-white" />
+                  <p>Wenzel House, Tolpits Lane, WD18 9AB</p>
                 </div>
 
                 <div className="flex gap-3">
-                  <Phone className="text-[#0D6E4F]" />
-                  <p className="text-[#0D2040] font-medium">020 7278 0007</p>
+                  <Phone className="text-white" />
+                  <p className="font-medium">020 7278 0007</p>
                 </div>
 
               </div>
 
               {/* SOCIAL */}
-              <div className="mt-7 flex gap-3">
+              <div className="mt-6 flex gap-3">
 
-                <a className="p-3 rounded-xl bg-[#F9FAFB] hover:bg-[#0D6E4F]/10 transition">
-                  <FaFacebookF size={16} className="text-[#0D2040]" />
-                </a>
-
-                <a className="p-3 rounded-xl bg-[#F9FAFB] hover:bg-[#0D6E4F]/10 transition">
-                  <FaTwitter size={16} className="text-[#0D2040]" />
-                </a>
+                {[FaFacebookF, FaTwitter].map((Icon, i) => (
+                  <div
+                    key={i}
+                    className="p-3 rounded-xl bg-white/10 hover:bg-white/20 cursor-pointer transition"
+                  >
+                    <Icon className="text-white" />
+                  </div>
+                ))}
 
               </div>
 
             </div>
 
-            {/* CTA CARD (refined) */}
-            <div className="bg-gradient-to-br from-[#0D2040] to-[#0D6E4F] text-white rounded-3xl p-7 shadow-lg">
+            {/* CTA */}
+            <div className="bg-white text-[#0D6E4F] rounded-3xl p-7 font-bold hover:scale-[1.02] transition">
 
-              <h3 className="text-xl font-bold">
-                Need Urgent Help?
-              </h3>
-
-              <p className="text-white/80 text-base mt-3">
+              <h3 className="text-xl">Need Urgent Help?</h3>
+              <p className="text-sm mt-2 text-[#0D2040] font-normal">
                 Call us directly for fast accounting support.
               </p>
 
-              <p className="mt-5 text-2xl font-black">
+              <p className="mt-5 text-2xl font-black text-[#0D6E4F]">
                 020 7278 0007
               </p>
 
@@ -113,50 +101,31 @@ const ContactForm = () => {
 
           </motion.div>
 
-          {/* ================= FORM ================= */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="lg:col-span-2 bg-white rounded-[32px] shadow-sm border border-[#E5E7EB] p-10 md:p-14"
-          >
+          {/* FORM */}
+          <motion.div className="lg:col-span-2 bg-white/10 backdrop-blur-xl rounded-[32px] border border-white/20 p-10 md:p-14">
 
             <div className="grid md:grid-cols-2 gap-7">
 
-              <input
-                name="name"
-                placeholder="Name *"
-                value={form.name}
-                onChange={handleChange}
-                className="px-6 py-5 rounded-xl border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#0D6E4F]"
-              />
-
-              <input
-                name="email"
-                placeholder="Email *"
-                value={form.email}
-                onChange={handleChange}
-                className="px-6 py-5 rounded-xl border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#0D6E4F]"
-              />
-
-              <input
-                name="phone"
-                placeholder="Phone"
-                value={form.phone}
-                onChange={handleChange}
-                className="px-6 py-5 rounded-xl border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#0D6E4F]"
-              />
+              {['name', 'email', 'phone'].map((field) => (
+                <input
+                  key={field}
+                  name={field}
+                  placeholder={field.toUpperCase()}
+                  value={form[field]}
+                  onChange={handleChange}
+                  className="px-6 py-5 rounded-xl bg-white/10 text-white placeholder-white/60 border border-white/20 focus:ring-2 focus:ring-white outline-none"
+                />
+              ))}
 
               <select
                 name="interest"
                 value={form.interest}
                 onChange={handleChange}
-                className="px-6 py-5 rounded-xl border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#0D6E4F]"
+                className="px-6 py-5 rounded-xl bg-white/10 text-white border border-white/20 focus:ring-2 focus:ring-white"
               >
-                <option>Accounting and Business Tax</option>
-                <option>VAT Services</option>
+                <option>Accounting</option>
+                <option>VAT</option>
                 <option>Payroll</option>
-                <option>Freelancer Support</option>
-                <option>Property Tax</option>
               </select>
 
             </div>
@@ -167,20 +136,20 @@ const ContactForm = () => {
               placeholder="Message"
               value={form.message}
               onChange={handleChange}
-              className="w-full mt-7 px-6 py-5 rounded-xl border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#0D6E4F]"
+              className="w-full mt-7 px-6 py-5 rounded-xl bg-white/10 text-white placeholder-white/60 border border-white/20 focus:ring-2 focus:ring-white outline-none"
             />
 
-            <div className="mt-8 grid md:grid-cols-2 gap-7 items-center">
+            <div className="mt-8 grid md:grid-cols-2 gap-7">
 
               <input
                 name="verify"
-                placeholder="Verification (e.g. 12)"
+                placeholder="Verification"
                 value={form.verify}
                 onChange={handleChange}
-                className="px-6 py-5 rounded-xl border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#0D6E4F]"
+                className="px-6 py-5 rounded-xl bg-white/10 text-white border border-white/20 focus:ring-2 focus:ring-white"
               />
 
-              <button className="px-8 py-5 rounded-xl bg-[#0D6E4F] text-white font-bold text-lg hover:bg-[#0b5c42] transition flex items-center justify-center gap-2">
+              <button className="px-8 py-5 rounded-xl bg-white text-[#0D6E4F] font-bold hover:bg-[#f0f0f0] transition flex items-center justify-center gap-2">
 
                 Send Message
                 <Send size={18} />
@@ -192,7 +161,6 @@ const ContactForm = () => {
           </motion.div>
 
         </div>
-
       </div>
     </div>
   );
