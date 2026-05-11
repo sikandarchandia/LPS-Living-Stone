@@ -5,37 +5,62 @@ const Layout = ({ children }) => {
   return (
     <div className="bg-[#F5F7FA] min-h-screen w-full">
 
-      <div className="max-w-[1650px] mx-auto px-2 sm:px-2 lg:px-2">
+      {/* subtle page glow */}
+      <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
+        <div className="absolute top-[-180px] left-[-120px] w-[320px] h-[320px] bg-[#0D6E4F]/5 blur-3xl rounded-full" />
+        <div className="absolute bottom-[-180px] right-[-120px] w-[320px] h-[320px] bg-[#0D2040]/5 blur-3xl rounded-full" />
+      </div>
+
+      <div className="relative max-w-[1650px] mx-auto px-2 sm:px-2 lg:px-2">
 
         {/* ================= DESKTOP ================= */}
-        <div className="hidden lg:flex gap-2 py-3">
+        <div className="hidden lg:flex gap-3 py-3">
 
-          {/* LEFT - SERVICES */}
-          <aside className="w-[20%]">
+          {/* CENTER CONTENT */}
+          <main className="w-[80%] min-w-0 order-1">
+            <div
+              className="
+                bg-white
+                border border-[#E5E7EB]
+                shadow-sm
+                overflow-hidden
+              "
+            >
+              {children}
+            </div>
+          </main>
+
+          {/* RIGHT - SERVICES */}
+          <aside className="w-[20%] order-2">
             <div className="sticky top-14 space-y-2">
               <ShortServices />
             </div>
           </aside>
 
-          {/* CENTER */}
-          <main className="w-[80%] min-w-0">
-            <div className="bg-white border border-[#E5E7EB]">
-              {children}
-            </div>
-          </main>
         </div>
 
         {/* ================= TABLET ================= */}
         <div className="hidden md:block lg:hidden">
 
-          <div className="bg-white rounded-3xl shadow-sm border border-[#E5E7EB]">
+          <div
+            className="
+              bg-white
+              rounded-3xl
+              shadow-sm
+              border border-[#E5E7EB]
+              overflow-hidden
+            "
+          >
             {children}
           </div>
 
-          <div className="grid grid-cols-2 gap-1">
-            <ShortServices />
+          <div className="grid grid-cols-2 gap-2 mt-2">
+
             <div className="space-y-1">
             </div>
+
+            <ShortServices />
+
           </div>
 
         </div>
@@ -43,11 +68,21 @@ const Layout = ({ children }) => {
         {/* ================= MOBILE ================= */}
         <div className="block md:hidden">
 
-          <div className="bg-white rounded-2xl shadow-sm border border-[#E5E7EB]">
+          <div
+            className="
+              bg-white
+              rounded-2xl
+              shadow-sm
+              border border-[#E5E7EB]
+              overflow-hidden
+            "
+          >
             {children}
           </div>
 
-          <ShortServices />
+          <div className="mt-2">
+            <ShortServices />
+          </div>
 
         </div>
 

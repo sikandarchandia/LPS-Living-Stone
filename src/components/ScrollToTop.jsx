@@ -44,29 +44,34 @@ const ScrollToTop = () => {
           rounded-full
           flex items-center justify-center
 
-          bg-gradient-to-br from-white/10 to-white/5
+          bg-[#0D2040]/95
           backdrop-blur-2xl
 
-          border border-white/20
-          shadow-[0_10px_40px_rgba(0,0,0,0.25)]
+          border border-[#0D6E4F]/20
+          shadow-[0_10px_40px_rgba(13,32,64,0.35)]
 
           hover:scale-110 active:scale-95
           transition-all duration-300
+          overflow-hidden
         "
       >
-        {/* Glow ring background (UPDATED) */}
-        <div className="absolute inset-0 rounded-full blur-md opacity-0 group-hover:opacity-100 bg-[#0D6E4F]/20 transition duration-300" />
+        {/* subtle background glow */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(13,110,79,0.18),transparent_70%)] opacity-80" />
 
-        {/* Progress Ring (UPDATED COLORS) */}
+        {/* Glow ring background */}
+        <div className="absolute inset-0 rounded-full blur-md opacity-0 group-hover:opacity-100 bg-[#0D6E4F]/25 transition duration-300" />
+
+        {/* Progress Ring */}
         <svg className="absolute w-full h-full -rotate-90">
           <circle
             cx="50%"
             cy="50%"
             r="24"
-            stroke="rgba(255,255,255,0.12)"
+            stroke="rgba(255,255,255,0.10)"
             strokeWidth="3"
             fill="none"
           />
+
           <circle
             cx="50%"
             cy="50%"
@@ -77,16 +82,17 @@ const ScrollToTop = () => {
             strokeDasharray="150"
             strokeDashoffset={150 - (150 * progress) / 100}
             strokeLinecap="round"
+            className="transition-all duration-200"
           />
         </svg>
 
-        {/* Floating Icon (UPDATED HOVER COLOR) */}
+        {/* Floating Icon */}
         <ArrowUp
           size={20}
           className="
             text-white
             group-hover:text-[#0D6E4F]
-            transition
+            transition-all duration-300
             relative z-10
             animate-[pulse_2.5s_ease-in-out_infinite]
           "

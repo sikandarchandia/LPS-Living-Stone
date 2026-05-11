@@ -38,8 +38,8 @@ const Navbar = () => {
           className={`
             transition-all duration-500 border-b
             ${isScrolled
-              ? 'bg-white/80 backdrop-blur-2xl shadow-lg border-slate-200 py-3'
-              : 'bg-white py-5'
+              ? 'bg-white/90 backdrop-blur-2xl shadow-lg border-[#E5E7EB] py-3'
+              : 'bg-white py-5 border-transparent'
             }
           `}
         >
@@ -47,20 +47,31 @@ const Navbar = () => {
           {/* subtle premium glow */}
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
             <div className="absolute top-[-100px] left-[10%] w-60 h-60 bg-[#0D6E4F]/10 blur-3xl rounded-full" />
-            <div className="absolute bottom-[-100px] right-[10%] w-60 h-60 bg-[#0D2340]/10 blur-3xl rounded-full" />
+            <div className="absolute bottom-[-100px] right-[10%] w-60 h-60 bg-[#0D2040]/10 blur-3xl rounded-full" />
           </div>
 
           <div className="relative max-w-[1500px] mx-auto px-6 flex items-center justify-between">
 
-            {/* LOGO */}
-            <a href="/" className="flex items-center">
+            {/* LOGO + BRAND */}
+            <a href="/" className="flex items-center gap-4">
+
               <img
                 src={logo}
                 alt="logo"
                 className={`transition-all duration-300 ${
-                  isScrolled ? 'h-10' : 'h-12'
+                  isScrolled ? 'h-14' : 'h-16'
                 }`}
               />
+
+              <div className="leading-tight">
+                <h1 className="text-[#0D2040] font-black text-lg sm:text-xl tracking-wide">
+                  Living Stone
+                </h1>
+                <p className="text-[#0D6E4F] text-[11px] sm:text-xs font-semibold tracking-[0.2em] uppercase">
+                  Chartered Accountants
+                </p>
+              </div>
+
             </a>
 
             {/* DESKTOP NAV */}
@@ -72,14 +83,15 @@ const Navbar = () => {
                   href={link.href}
                   className="
                     relative px-4 py-2 text-[12px] font-semibold tracking-wide
-                    text-[#0D2340]
-                    hover:text-white
+                    text-[#0D2040]
+                    hover:text-[#0D6E4F]
                     rounded-lg
                     transition-all duration-300
                     group overflow-hidden
                   "
                 >
-                  <span className="absolute inset-0 bg-gradient-to-r from-[#0D2340] to-[#0D6E4F] opacity-0 group-hover:opacity-100 transition duration-300 rounded-lg" />
+                  <span className="absolute left-4 bottom-1 w-0 h-[2px] bg-[#0D6E4F] group-hover:w-[calc(100%-32px)] transition-all duration-300 rounded-full" />
+
                   <span className="relative z-10">
                     {link.name}
                   </span>
@@ -88,16 +100,17 @@ const Navbar = () => {
 
             </div>
 
-            {/* CTA (premium touch) */}
+            {/* CTA */}
             <div className="hidden lg:block">
               <a
                 href="/contact"
                 className="
                   px-5 py-2.5 rounded-xl
-                  bg-gradient-to-r from-[#0D2340] to-[#0D6E4F]
+                  bg-[#0D6E4F]
+                  hover:bg-[#0b5c42]
                   text-white text-[12px] font-semibold
                   shadow-md hover:shadow-xl
-                  transition
+                  transition-all duration-300
                 "
               >
                 Book Consultation
@@ -107,7 +120,7 @@ const Navbar = () => {
             {/* MOBILE */}
             <button
               onClick={() => setMobileOpen(true)}
-              className="lg:hidden p-2 rounded-lg bg-[#0D2340] text-white"
+              className="lg:hidden p-2 rounded-lg bg-[#0D6E4F] text-white transition-all duration-300"
             >
               <Menu size={22} />
             </button>
@@ -124,18 +137,31 @@ const Navbar = () => {
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ duration: 0.4 }}
-            className="fixed inset-0 z-[1000] bg-[#0D2340]"
+            className="fixed inset-0 z-[1000] bg-white"
           >
 
             {/* top */}
-            <div className="flex items-center justify-between px-5 py-5 border-b border-white/10">
-              <img src={logo} className="h-10" />
+            <div className="flex items-center justify-between px-5 py-5 border-b border-[#E5E7EB]">
+
+              <div className="flex items-center gap-3">
+                <img src={logo} className="h-10" />
+                <div className="leading-tight">
+                  <h1 className="text-[#0D2040] font-bold text-sm">
+                    Living Stone
+                  </h1>
+                  <p className="text-[#0D6E4F] text-[10px] uppercase tracking-[0.15em]">
+                    Chartered Accountants
+                  </p>
+                </div>
+              </div>
+
               <button
                 onClick={() => setMobileOpen(false)}
-                className="p-2 rounded-lg bg-white/10 text-white"
+                className="p-2 rounded-lg bg-[#0D2040] text-white"
               >
                 <X size={22} />
               </button>
+
             </div>
 
             {/* links */}
@@ -149,17 +175,42 @@ const Navbar = () => {
                   className="
                     flex items-center justify-between
                     px-5 py-4 rounded-xl
-                    bg-white/5 hover:bg-[#0D6E4F]/20
-                    border border-white/10
-                    text-white text-sm font-medium
-                    transition
+                    bg-[#F5F7FA]
+                    hover:bg-[#EAF5F0]
+                    border border-[#E5E7EB]
+                    text-[#0D2040] text-sm font-semibold
+                    transition-all duration-300
                   "
                 >
-                  {link.name}
-                  <ChevronRight size={18} />
+                  <span>
+                    {link.name}
+                  </span>
+
+                  <ChevronRight
+                    size={18}
+                    className="text-[#0D6E4F]"
+                  />
                 </a>
               ))}
 
+            </div>
+
+            {/* mobile CTA */}
+            <div className="px-5 pb-8">
+              <a
+                href="/contact"
+                onClick={() => setMobileOpen(false)}
+                className="
+                  flex items-center justify-center
+                  w-full py-4 rounded-xl
+                  bg-[#0D6E4F]
+                  hover:bg-[#0b5c42]
+                  text-white text-sm font-semibold
+                  transition-all duration-300
+                "
+              >
+                Book Consultation
+              </a>
             </div>
 
           </motion.div>

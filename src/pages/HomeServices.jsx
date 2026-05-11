@@ -1,8 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ShieldCheck, Building2, TrendingUp, Users, Award } from "lucide-react";
+import {
+  ShieldCheck,
+  Building2,
+  Award,
+} from "lucide-react";
 
-import heroBg from "../assets/background.jpeg";
 import heroVideo from "../assets/20260209_1219_New Video_simple_compose_01kh0mam37fjz90gyjrc9xp11q.mp4";
 
 const fadeUp = {
@@ -19,52 +22,76 @@ const stats = [
 
 const HomeServices = () => {
   return (
-    <section className="w-full bg-[#F6F8FC] overflow-hidden">
-      {/* ================= HERO (PREMIUM CORPORATE STYLE) ================= */}
-      <div className="relative min-h-[72vh] flex items-center justify-center">
-        <img
-          src={heroBg}
-          alt="Hero"
-          className="absolute inset-0 w-full h-full object-cover"
+    <section className="w-full bg-[#F5F7FA] overflow-hidden">
+
+      {/* ================= HERO ================= */}
+      <div className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+
+        {/* Video */}
+        <video
+          src={heroVideo}
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover scale-105"
         />
 
-        {/* professional overlay */}
-        <div className="absolute inset-0 bg-[#0B1F3B]/30" />
+        {/* Dark overlay (better contrast) */}
+        <div className="absolute inset-0 bg-[#071A2B]/30" />
 
-        {/* subtle glow */}
-        <div className="absolute -top-40 -left-40 w-[420px] h-[420px] bg-cyan-400/10 blur-3xl rounded-full" />
-        <div className="absolute -bottom-40 -right-40 w-[420px] h-[420px] bg-blue-500/10 blur-3xl rounded-full" />
+        {/* Green glow (kept your theme) */}
+        <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-[#0D6E4F]/20 blur-3xl rounded-full" />
+        <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-[#0D6E4F]/25 blur-3xl rounded-full" />
 
+        {/* CONTENT */}
         <motion.div
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          transition={{ staggerChildren: 0.1 }}
-          className="relative z-10 text-center max-w-4xl px-5"
+          transition={{ staggerChildren: 0.12 }}
+          className="relative z-10 text-center max-w-5xl px-5"
         >
-          {/* badge */}
-          <motion.div
-            variants={fadeUp}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white text-xs tracking-wide"
-          >
-            <ShieldCheck size={14} />
-            Chartered-Style Accounting & Advisory Services
-          </motion.div>
-
+          {/* 🔥 BIGGER TITLE */}
           <motion.h1
             variants={fadeUp}
-            className="mt-6 text-white text-3xl sm:text-5xl font-semibold leading-tight"
+            className="
+              mt-7
+              text-white
+              text-4xl sm:text-6xl
+              font-bold
+              leading-tight
+            "
           >
             Trusted Accounting & Tax Advisory
-            <span className="block text-[#0D6E4F] font-bold">
-              for UK Businesses & Individuals
-            </span>
           </motion.h1>
 
-          {/* description */}
+          {/* GREEN BACKGROUND SUBTITLE (FIXED READABILITY ISSUE) */}
+          <motion.div
+            variants={fadeUp}
+            className="
+              mt-4 inline-block
+              px-4 py-2
+              bg-[#0D6E4F]/40
+              rounded-lg
+              border border-[#0D6E4F]/60
+            "
+          >
+            <h2 className="text-white text-xl sm:text-3xl font-semibold">
+              for UK Businesses & Individuals
+            </h2>
+          </motion.div>
+
+          {/* DESCRIPTION (BIGGER) */}
           <motion.p
             variants={fadeUp}
-            className="mt-5 text-white/75 text-sm sm:text-lg leading-7"
+            className="
+              mt-6
+              text-white/85
+              text-base sm:text-xl
+              leading-8
+              max-w-3xl mx-auto
+            "
           >
             We provide clear, compliant and commercially focused accounting
             services for businesses, landlords, contractors and professionals
@@ -74,107 +101,151 @@ const HomeServices = () => {
           {/* CTA */}
           <motion.div
             variants={fadeUp}
-            className="mt-8 flex flex-col sm:flex-row gap-3 justify-center"
+            className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <button className="px-7 py-3 rounded-xl bg-cyan-400 text-black font-semibold hover:bg-white transition">
+            <button className="
+              px-9 py-3.5 rounded-xl
+              bg-[#0D6E4F]
+              text-white font-semibold
+              hover:bg-[#0b5c42]
+              transition
+            ">
               Book Consultation
             </button>
 
-            <button className="px-7 py-3 rounded-xl border border-white/30 text-white hover:bg-white/10 transition">
+            <button className="
+              px-9 py-3.5 rounded-xl
+              border border-white/25
+              text-white
+              bg-white/5
+              hover:bg-white/10
+              backdrop-blur-sm
+              transition
+            ">
               Explore Services
             </button>
           </motion.div>
+
         </motion.div>
       </div>
 
-      {/* ================= TRUST STATS ================= */}
-      <section className="py-14 bg-white border-b border-slate-100">
+      {/* ================= STATS ================= */}
+      <section className="py-14 bg-white border-b border-[#E5E7EB]">
         <div className="max-w-6xl mx-auto px-5 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+
           {stats.map((s, i) => (
-            <div key={i} className="space-y-2">
-              <h3 className="text-2xl md:text-3xl font-bold text-[#0B2B61]">
+            <div
+              key={i}
+              className="bg-white border border-[#E5E7EB] rounded-2xl py-8 px-4 shadow-sm hover:shadow-xl transition"
+            >
+              <h3 className="text-3xl font-bold text-[#0D2040]">
                 {s.value}
               </h3>
-              <p className="text-xs md:text-sm text-slate-500">{s.label}</p>
+              <p className="mt-2 text-sm text-[#6B7280]">
+                {s.label}
+              </p>
             </div>
           ))}
+
         </div>
       </section>
 
-      {/* ================= ABOUT (CLEAN CORPORATE STYLE) ================= */}
+      {/* ================= ABOUT ================= */}
       <section className="py-16 md:py-20">
         <div className="max-w-6xl mx-auto px-5 grid md:grid-cols-2 gap-12 items-center">
+
           <motion.div
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
             transition={{ staggerChildren: 0.1 }}
           >
+
+            <motion.div
+              variants={fadeUp}
+              className="
+                inline-flex items-center gap-2
+                px-4 py-2 rounded-full
+                bg-[#0D6E4F]/15
+                border border-[#0D6E4F]/30
+                text-[#0D6E4F]
+                text-xs font-semibold mb-5
+              "
+            >
+              <Award size={14} />
+              Trusted Financial Expertise
+            </motion.div>
+
             <motion.h2
               variants={fadeUp}
-              className="text-2xl md:text-4xl font-semibold text-[#0B2B61]"
+              className="text-3xl md:text-4xl font-semibold text-[#0D2040]"
             >
               A Modern Approach to Accounting
             </motion.h2>
 
             <motion.p
               variants={fadeUp}
-              className="mt-5 text-slate-600 leading-7"
+              className="mt-5 text-[#6B7280] leading-7 text-base"
             >
-              LPS Livingstone delivers professional accounting, taxation and
-              advisory services designed to support long-term business growth
-              and financial compliance.
+              Professional accounting, taxation and advisory services designed
+              for long-term growth and compliance.
             </motion.p>
 
-            <motion.p
-              variants={fadeUp}
-              className="mt-4 text-slate-600 leading-7"
-            >
-              We combine technical expertise with practical business insight to
-              help clients make informed financial decisions with confidence.
-            </motion.p>
+            <motion.div variants={fadeUp} className="mt-7 space-y-4">
 
-            {/* bullets */}
-            <motion.div
-              variants={fadeUp}
-              className="mt-6 space-y-3 text-sm text-slate-700"
-            >
-              <p>✔ HMRC compliant accounting & tax services</p>
-              <p>✔ Specialist support for landlords & contractors</p>
-              <p>✔ Business advisory & financial planning</p>
-              <p>✔ Cloud-based accounting systems</p>
+              {[
+                "HMRC compliant accounting & tax services",
+                "Support for landlords & contractors",
+                "Business advisory & planning",
+                "Cloud-based accounting systems",
+              ].map((item, i) => (
+                <div key={i} className="flex items-center gap-3 text-sm text-[#0D2040] font-medium">
+                  <div className="w-6 h-6 rounded-full bg-[#0D6E4F]/10 flex items-center justify-center text-[#0D6E4F] text-xs font-bold">
+                    ✓
+                  </div>
+                  {item}
+                </div>
+              ))}
+
             </motion.div>
+
           </motion.div>
 
-          {/* visual card */}
+          {/* Video Card */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="rounded-2xl bg-white border shadow-lg overflow-hidden"
+            className="rounded-3xl bg-white border border-[#E5E7EB] shadow-xl overflow-hidden"
           >
+
             <video
               src={heroVideo}
               autoPlay
               muted
               loop
               playsInline
-              className="w-full h-[320px] object-cover"
+              className="w-full h-[340px] object-cover"
             />
 
-            <div className="p-5">
-              <h3 className="font-semibold text-[#0B2B61] flex items-center gap-2">
-                <Building2 size={18} />
+            <div className="p-6">
+
+              <h3 className="font-semibold text-[#0D2040] flex items-center gap-2 text-lg">
+                <Building2 size={18} className="text-[#0D6E4F]" />
                 Professional Advisory in Practice
               </h3>
-              <p className="text-sm text-slate-600 mt-2">
-                Clear reporting, proactive advice, and compliance-first
-                accounting support.
+
+              <p className="text-sm text-[#6B7280] mt-3">
+                Clear reporting, proactive advice, and compliance-first accounting support.
               </p>
+
             </div>
+
           </motion.div>
+
         </div>
       </section>
+
     </section>
   );
 };

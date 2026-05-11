@@ -19,73 +19,82 @@ const services = [
 
 const ServiceChargeAccounting = () => {
   return (
-    <div className="bg-[#f6f9ff] overflow-hidden">
+    <div className="bg-[#F5F7FA] overflow-hidden">
 
       {/* ================= HERO ================= */}
-      <section className="relative py-24 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#04152d] via-[#0d2f68] to-[#0a3d91]" />
+      <section className="relative py-28 text-white overflow-hidden">
+
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0D2340] via-[#0D2340] to-[#0D6E4F]" />
+
+        {/* glow */}
+        <div className="absolute -top-40 left-[-120px] w-[520px] h-[520px] bg-[#0D6E4F]/20 blur-3xl rounded-full" />
+        <div className="absolute bottom-[-180px] right-[-120px] w-[520px] h-[520px] bg-[#0D6E4F]/20 blur-3xl rounded-full" />
 
         <div className="relative max-w-5xl mx-auto px-6 text-center">
 
-          <h1 className="text-3xl md:text-5xl font-black tracking-tight">
+          <h1 className="text-4xl md:text-6xl font-black leading-tight">
             Service Charge Accounting
           </h1>
 
-          <p className="mt-5 text-white/70 text-sm md:text-lg leading-7 max-w-3xl mx-auto">
-            Leading specialists in service charge accounting for residential and commercial properties across London and the UK.
+          <p className="mt-6 text-white/75 text-lg md:text-xl leading-8 max-w-3xl mx-auto">
+            Leading specialists in service charge accounting for residential and
+            commercial properties across London and the UK.
           </p>
 
         </div>
       </section>
 
       {/* ================= INTRO ================= */}
-      <section className="py-10 md:py-14 bg-white">
-        <div className="max-w-5xl mx-auto px-6 text-gray-700 text-sm md:text-base leading-7">
+      <section className="py-14 bg-white">
+
+        <div className="max-w-5xl mx-auto px-6 text-[#6B7280] text-base leading-8">
 
           <p>
-            We have built our reputation as one of the leading service charge accountants in London,
-            serving both commercial and residential property portfolios — from self-managed flats to major managing agents.
+            We are recognised specialists in service charge accounting, supporting
+            residential and commercial property portfolios — from small self-managed
+            blocks to large managing agents.
           </p>
 
-          <p className="mt-4">
-            We currently support over <b>600 service charge clients nationwide</b>, delivering accuracy, compliance, and clarity in every report.
+          <p className="mt-5">
+            We currently support over <b className="text-[#0D2340]">600+ service charge clients</b>
+            nationwide with accuracy, compliance, and transparent reporting.
           </p>
 
         </div>
       </section>
 
       {/* ================= IMAGE + SERVICES ================= */}
-      <section className="py-16 md:py-24">
+      <section className="py-20 md:py-28">
+
         <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-14 items-center">
 
           {/* IMAGE */}
           <motion.div
             initial={{ opacity: 0, x: -60 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.7 }}
           >
             <img
               src={img}
-              alt="Service charge accounting illustration showing property financial management"
-              loading="lazy"
-              decoding="async"
-              className="rounded-3xl shadow-2xl w-full object-cover h-[420px]"
+              alt="Service charge accounting illustration"
+              className="rounded-3xl shadow-2xl w-full object-cover h-[440px]"
             />
           </motion.div>
 
-          {/* SERVICES LIST */}
+          {/* SERVICES */}
           <motion.div
             initial={{ opacity: 0, x: 60 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.7 }}
           >
 
-            <h2 className="text-3xl font-black text-[#0b2b61]">
+            <h2 className="text-3xl md:text-4xl font-black text-[#0D2340]">
               Complete Service Charge Solutions
             </h2>
 
-            <p className="mt-4 text-gray-600 leading-7">
-              We provide a full end-to-end service charge accounting solution under one roof.
+            <p className="mt-4 text-[#6B7280] leading-7">
+              End-to-end accounting solutions designed for landlords, managing agents,
+              and property professionals.
             </p>
 
             <div className="mt-8 space-y-4">
@@ -93,12 +102,21 @@ const ServiceChargeAccounting = () => {
               {services.map((item, i) => (
                 <div
                   key={i}
-                  className="flex items-start gap-3 bg-white border border-slate-100 p-4 rounded-xl shadow-sm"
+                  className="
+                    flex items-start gap-3
+                    bg-white
+                    border border-[#E5E7EB]
+                    p-5 rounded-2xl
+                    shadow-sm hover:shadow-md
+                    transition
+                  "
                 >
-                  <CheckCircle2 className="text-cyan-500 mt-1" size={18} />
-                  <span className="text-slate-700 text-sm md:text-base leading-6">
+                  <CheckCircle2 className="text-[#0D6E4F] mt-1" size={18} />
+
+                  <span className="text-[#0D2340] text-base leading-7 font-medium">
                     {item}
                   </span>
+
                 </div>
               ))}
 
@@ -110,22 +128,25 @@ const ServiceChargeAccounting = () => {
       </section>
 
       {/* ================= GUIDANCE ================= */}
-      <section className="py-16 bg-white border-t">
-        <div className="max-w-5xl mx-auto px-6 space-y-10 text-gray-700 text-sm md:text-base leading-7">
+      <section className="py-20 bg-white border-t border-[#E5E7EB]">
+
+        <div className="max-w-5xl mx-auto px-6 space-y-12 text-[#6B7280] text-base leading-8">
 
           <div>
-            <h3 className="text-xl font-bold text-[#0b2b61] mb-3">Guidance & Standards</h3>
+            <h3 className="text-2xl font-black text-[#0D2340] mb-3">
+              Guidance & Standards
+            </h3>
             <p>
-              Guidance on accounting and reporting for residential service charge accounts is prepared in line with:
-            </p>
-            <p className="mt-2 text-gray-600">
-              ACCA, ICAEW, ICAS, ARMA, and RICS joint working group standards (October 2011).
+              Accounting and reporting is prepared in line with industry standards issued by
+              ACCA, ICAEW, ICAS, ARMA, and RICS.
             </p>
           </div>
 
           <div>
-            <h3 className="text-xl font-bold text-[#0b2b61] mb-3">Legal Framework</h3>
-            <ul className="list-disc pl-5 space-y-1">
+            <h3 className="text-2xl font-black text-[#0D2340] mb-3">
+              Legal Framework
+            </h3>
+            <ul className="list-disc pl-6 space-y-2">
               <li>Landlord and Tenant Act 1985</li>
               <li>Landlord and Tenant Act 1987</li>
               <li>Commonhold and Leasehold Reform Act 2002</li>
@@ -134,10 +155,12 @@ const ServiceChargeAccounting = () => {
           </div>
 
           <div>
-            <h3 className="text-xl font-bold text-[#0b2b61] mb-3">Tribunal Decisions</h3>
+            <h3 className="text-2xl font-black text-[#0D2340] mb-3">
+              Tribunal Support
+            </h3>
             <p>
-              We assist landlords and managing agents in understanding leasehold valuation tribunal decisions
-              and their implications on service charge recovery and reporting.
+              We assist landlords and managing agents in interpreting tribunal decisions
+              and ensuring compliance with lease obligations.
             </p>
           </div>
 
@@ -145,32 +168,33 @@ const ServiceChargeAccounting = () => {
       </section>
 
       {/* ================= CTA ================= */}
-      <section className="relative py-20 text-white overflow-hidden">
+      <section className="relative py-24 text-white overflow-hidden">
 
-        <div className="absolute inset-0 bg-gradient-to-r from-[#04142d] to-[#0a3d91]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0D2340] to-[#0D6E4F]" />
 
         <div className="relative max-w-3xl mx-auto px-6 text-center">
 
-          <h2 className="text-2xl md:text-4xl font-black">
+          <h2 className="text-3xl md:text-5xl font-black">
             Need Expert Service Charge Support?
           </h2>
 
-          <p className="mt-5 text-white/70">
-            Speak to our specialists for accurate, compliant and efficient service charge accounting.
+          <p className="mt-6 text-white/75 text-lg leading-7">
+            Speak to our specialists for accurate, compliant and efficient reporting.
           </p>
 
           <button
-            aria-label="Book consultation"
-            className="mt-8 group relative overflow-hidden px-9 py-4 rounded-2xl bg-gradient-to-r from-cyan-400 to-blue-600 font-bold"
+            className="
+              mt-10
+              px-10 py-4
+              rounded-2xl
+              bg-[#0D6E4F]
+              hover:bg-[#0b5c42]
+              font-bold
+              shadow-lg
+              transition
+            "
           >
-
-            <span className="absolute top-0 left-[-120%] w-[40%] h-full bg-white/30 rotate-12 blur-md group-hover:left-[140%] transition-all duration-1000" />
-
-            <span className="relative flex items-center justify-center gap-2">
-              Book Consultation
-              <ArrowRight size={18} />
-            </span>
-
+            Book Consultation
           </button>
 
         </div>

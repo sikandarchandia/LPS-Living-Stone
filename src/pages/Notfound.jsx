@@ -7,70 +7,71 @@ const NotFound = () => {
   const navigate = useNavigate();
 
   return (
-    <div
-      className="relative min-h-screen flex items-center justify-center bg-[#f6f9ff] overflow-hidden"
-      aria-label="404 Not Found Page"
-    >
+    <div className="relative min-h-screen flex items-center justify-center bg-[#F5F7FA] overflow-hidden">
 
-      {/* Background Glow */}
-      <div className="absolute top-[-200px] left-[-200px] w-[500px] h-[500px] bg-cyan-300/20 blur-3xl rounded-full pointer-events-none" />
-      <div className="absolute bottom-[-200px] right-[-200px] w-[500px] h-[500px] bg-blue-500/20 blur-3xl rounded-full pointer-events-none" />
+      {/* ================= BACKGROUND GLOW (THEME MATCHED) ================= */}
+      <div className="absolute top-[-220px] left-[-200px] w-[550px] h-[550px] bg-[#0D6E4F]/20 blur-3xl rounded-full" />
+      <div className="absolute bottom-[-220px] right-[-200px] w-[550px] h-[550px] bg-[#0D2340]/20 blur-3xl rounded-full" />
 
-      {/* Floating Particles */}
+      {/* Floating dots */}
       <motion.div
-        role="img"
-        aria-label="floating decoration"
-        animate={{ y: [0, -20, 0] }}
+        animate={{ y: [0, -18, 0] }}
         transition={{ duration: 4, repeat: Infinity }}
-        className="absolute w-3 h-3 bg-cyan-400/40 rounded-full top-1/4 left-1/4 pointer-events-none"
+        className="absolute w-3 h-3 bg-[#0D6E4F]/40 rounded-full top-1/4 left-1/4"
       />
 
       <motion.div
-        role="img"
-        aria-label="floating decoration"
-        animate={{ y: [0, 25, 0] }}
+        animate={{ y: [0, 22, 0] }}
         transition={{ duration: 5, repeat: Infinity }}
-        className="absolute w-2 h-2 bg-blue-400/40 rounded-full bottom-1/3 right-1/4 pointer-events-none"
+        className="absolute w-2 h-2 bg-[#0D2340]/40 rounded-full bottom-1/3 right-1/4"
       />
 
-      {/* Main Card */}
+      {/* ================= MAIN CARD ================= */}
       <motion.div
-        initial={{ opacity: 0, scale: 0.8, y: 40 }}
+        initial={{ opacity: 0, scale: 0.85, y: 40 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         className="relative z-10 text-center max-w-xl px-6"
       >
 
-        {/* BIG 404 */}
+        {/* BIG 404 (ENHANCED) */}
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="text-[120px] sm:text-[160px] font-black text-[#0b2b61] leading-none"
+          className="
+            text-[130px] sm:text-[180px]
+            font-black
+            leading-none
+            text-[#0D2340]
+            tracking-tight
+          "
         >
           404
         </motion.h1>
 
-        {/* TEXT */}
-        <h2 className="text-2xl sm:text-3xl font-bold text-gray-800">
+        {/* TITLE */}
+        <h2 className="text-3xl sm:text-4xl font-bold text-[#0D2340] mt-2">
           Oops! Page Not Found
         </h2>
 
-        <p className="mt-4 text-gray-500 text-sm sm:text-base">
+        {/* DESCRIPTION (better readability) */}
+        <p className="mt-5 text-[#6B7280] text-base sm:text-lg leading-7">
           The page you are looking for doesn’t exist or has been moved.
         </p>
 
-        {/* BUTTONS */}
-        <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+        {/* ================= BUTTONS ================= */}
+        <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
 
-          {/* Go Home */}
+          {/* HOME */}
           <button
             onClick={() => navigate('/')}
             className="
               flex items-center justify-center gap-2
-              px-6 py-3 rounded-xl
-              bg-gradient-to-r from-cyan-400 to-blue-600
+              px-7 py-3.5 rounded-xl
+              bg-[#0D6E4F]
               text-white font-semibold
+              hover:bg-[#0b5c42]
               shadow-lg
               hover:scale-105 active:scale-95
               transition
@@ -80,17 +81,20 @@ const NotFound = () => {
             Go Home
           </button>
 
-          {/* Go Back */}
+          {/* BACK */}
           <button
             onClick={() => navigate(-1)}
             className="
               flex items-center justify-center gap-2
-              px-6 py-3 rounded-xl
-              bg-white border border-slate-200
-              text-[#0b2b61] font-semibold
-              shadow-sm
-              hover:bg-slate-50 hover:scale-105 active:scale-95
+              px-7 py-3.5 rounded-xl
+              bg-white
+              border border-[#E5E7EB]
+              text-[#0D2340]
+              font-semibold
+              hover:bg-[#F5F7FA]
+              hover:scale-105 active:scale-95
               transition
+              shadow-sm
             "
           >
             <ArrowLeft size={18} />
@@ -99,11 +103,11 @@ const NotFound = () => {
 
         </div>
 
-        {/* Floating Line Animation */}
+        {/* ================= DECOR LINE ================= */}
         <motion.div
-          animate={{ scaleX: [0.6, 1, 0.6] }}
+          animate={{ scaleX: [0.7, 1, 0.7] }}
           transition={{ duration: 3, repeat: Infinity }}
-          className="mt-10 h-[2px] w-40 mx-auto bg-gradient-to-r from-cyan-400 to-blue-600 rounded-full pointer-events-none"
+          className="mt-12 h-[2px] w-44 mx-auto bg-gradient-to-r from-[#0D6E4F] to-[#0D2340] rounded-full"
         />
 
       </motion.div>
