@@ -3,18 +3,18 @@ import ShortServices from './ShortServices';
 
 const Layout = ({ children }) => {
   return (
-    <div className="bg-[#F5F7FA] min-h-screen w-full">
+    <div className="bg-white min-h-screen w-full">
 
-      {/* subtle page glow */}
+      {/* soft premium background glow */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
         <div className="absolute top-[-180px] left-[-120px] w-[320px] h-[320px] bg-[#0D6E4F]/5 blur-3xl rounded-full" />
         <div className="absolute bottom-[-180px] right-[-120px] w-[320px] h-[320px] bg-[#0D2040]/5 blur-3xl rounded-full" />
       </div>
 
-      <div className="relative max-w-[1650px] mx-auto px-2 sm:px-2 lg:px-2">
+      <div className="relative max-w-[1650px] mx-auto px-2 sm:px-3 lg:px-3">
 
         {/* ================= DESKTOP ================= */}
-        <div className="hidden lg:flex gap-3 py-3">
+        <div className="hidden lg:flex gap-2 py-3">
 
           {/* CENTER CONTENT */}
           <main className="w-[80%] min-w-0 order-1">
@@ -23,6 +23,7 @@ const Layout = ({ children }) => {
                 bg-white
                 border border-[#E5E7EB]
                 shadow-sm
+                rounded-2xl
                 overflow-hidden
               "
             >
@@ -32,7 +33,7 @@ const Layout = ({ children }) => {
 
           {/* RIGHT - SERVICES */}
           <aside className="w-[20%] order-2">
-            <div className="sticky top-14 space-y-2">
+            <div className="sticky top-16 space-y-3">
               <ShortServices />
             </div>
           </aside>
@@ -45,7 +46,7 @@ const Layout = ({ children }) => {
           <div
             className="
               bg-white
-              rounded-3xl
+              rounded-2xl
               shadow-sm
               border border-[#E5E7EB]
               overflow-hidden
@@ -54,13 +55,8 @@ const Layout = ({ children }) => {
             {children}
           </div>
 
-          <div className="grid grid-cols-2 gap-2 mt-2">
-
-            <div className="space-y-1">
-            </div>
-
+          <div className="grid grid-cols-2 gap-4 mt-4">
             <ShortServices />
-
           </div>
 
         </div>
@@ -80,7 +76,7 @@ const Layout = ({ children }) => {
             {children}
           </div>
 
-          <div className="mt-2">
+          <div className="mt-4">
             <ShortServices />
           </div>
 

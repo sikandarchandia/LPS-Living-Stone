@@ -18,11 +18,11 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="relative bg-[#F5F7FA] py-28 overflow-hidden">
+    <div className="relative bg-white py-28 overflow-hidden">
 
-      {/* Glow background */}
-      <div className="absolute top-[-180px] left-[-160px] w-[520px] h-[520px] bg-[#0D6E4F]/20 blur-3xl rounded-full" />
-      <div className="absolute bottom-[-180px] right-[-160px] w-[520px] h-[520px] bg-[#0D2340]/20 blur-3xl rounded-full" />
+      {/* soft premium glow */}
+      <div className="absolute top-[-180px] left-[-160px] w-[520px] h-[520px] bg-[#0D6E4F]/5 blur-3xl rounded-full" />
+      <div className="absolute bottom-[-180px] right-[-160px] w-[520px] h-[520px] bg-[#0D2040]/5 blur-3xl rounded-full" />
 
       <div className="relative max-w-6xl mx-auto px-6">
 
@@ -34,12 +34,10 @@ const ContactForm = () => {
             Get in Touch
           </div>
 
-          {/* 🔥 BIGGER TITLE */}
-          <h2 className="mt-6 text-4xl md:text-6xl font-black text-[#0D2340]">
+          <h2 className="mt-6 text-4xl md:text-6xl font-black text-[#0D2040]">
             Contact Our Experts
           </h2>
 
-          {/* bigger subtitle */}
           <p className="mt-5 text-lg md:text-xl text-[#6B7280] max-w-2xl mx-auto leading-8">
             Fill out the form and our team will respond with professional guidance tailored to your business.
           </p>
@@ -57,9 +55,9 @@ const ContactForm = () => {
           >
 
             {/* INFO CARD */}
-            <div className="bg-white rounded-3xl p-7 shadow-xl border border-[#E5E7EB]">
+            <div className="bg-white rounded-3xl p-7 shadow-sm border border-[#E5E7EB]">
 
-              <h3 className="text-2xl font-black text-[#0D2340]">
+              <h3 className="text-2xl font-black text-[#0D2040]">
                 LPS Livingstone
               </h3>
 
@@ -76,7 +74,7 @@ const ContactForm = () => {
 
                 <div className="flex gap-3">
                   <Phone className="text-[#0D6E4F]" />
-                  <p className="text-[#0D2340] font-medium">020 7278 0007</p>
+                  <p className="text-[#0D2040] font-medium">020 7278 0007</p>
                 </div>
 
               </div>
@@ -84,20 +82,20 @@ const ContactForm = () => {
               {/* SOCIAL */}
               <div className="mt-7 flex gap-3">
 
-                <a className="p-3 rounded-xl bg-[#F5F7FA] hover:bg-[#0D6E4F]/10 transition">
-                  <FaFacebookF size={16} className="text-[#0D2340]" />
+                <a className="p-3 rounded-xl bg-[#F9FAFB] hover:bg-[#0D6E4F]/10 transition">
+                  <FaFacebookF size={16} className="text-[#0D2040]" />
                 </a>
 
-                <a className="p-3 rounded-xl bg-[#F5F7FA] hover:bg-[#0D6E4F]/10 transition">
-                  <FaTwitter size={16} className="text-[#0D2340]" />
+                <a className="p-3 rounded-xl bg-[#F9FAFB] hover:bg-[#0D6E4F]/10 transition">
+                  <FaTwitter size={16} className="text-[#0D2040]" />
                 </a>
 
               </div>
 
             </div>
 
-            {/* CTA CARD */}
-            <div className="bg-gradient-to-br from-[#0D2340] to-[#0D6E4F] text-white rounded-3xl p-7 shadow-xl">
+            {/* CTA CARD (refined) */}
+            <div className="bg-gradient-to-br from-[#0D2040] to-[#0D6E4F] text-white rounded-3xl p-7 shadow-lg">
 
               <h3 className="text-xl font-bold">
                 Need Urgent Help?
@@ -119,7 +117,7 @@ const ContactForm = () => {
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="lg:col-span-2 bg-white rounded-[32px] shadow-[0_25px_90px_rgba(0,0,0,0.08)] border border-[#E5E7EB] p-10 md:p-14"
+            className="lg:col-span-2 bg-white rounded-[32px] shadow-sm border border-[#E5E7EB] p-10 md:p-14"
           >
 
             <div className="grid md:grid-cols-2 gap-7">
@@ -129,7 +127,7 @@ const ContactForm = () => {
                 placeholder="Name *"
                 value={form.name}
                 onChange={handleChange}
-                className="px-6 py-5 text-base rounded-xl border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#0D6E4F]"
+                className="px-6 py-5 rounded-xl border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#0D6E4F]"
               />
 
               <input
@@ -137,7 +135,7 @@ const ContactForm = () => {
                 placeholder="Email *"
                 value={form.email}
                 onChange={handleChange}
-                className="px-6 py-5 text-base rounded-xl border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#0D6E4F]"
+                className="px-6 py-5 rounded-xl border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#0D6E4F]"
               />
 
               <input
@@ -145,14 +143,14 @@ const ContactForm = () => {
                 placeholder="Phone"
                 value={form.phone}
                 onChange={handleChange}
-                className="px-6 py-5 text-base rounded-xl border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#0D6E4F]"
+                className="px-6 py-5 rounded-xl border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#0D6E4F]"
               />
 
               <select
                 name="interest"
                 value={form.interest}
                 onChange={handleChange}
-                className="px-6 py-5 text-base rounded-xl border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#0D6E4F]"
+                className="px-6 py-5 rounded-xl border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#0D6E4F]"
               >
                 <option>Accounting and Business Tax</option>
                 <option>VAT Services</option>
@@ -169,7 +167,7 @@ const ContactForm = () => {
               placeholder="Message"
               value={form.message}
               onChange={handleChange}
-              className="w-full mt-7 px-6 py-5 text-base rounded-xl border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#0D6E4F]"
+              className="w-full mt-7 px-6 py-5 rounded-xl border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#0D6E4F]"
             />
 
             <div className="mt-8 grid md:grid-cols-2 gap-7 items-center">
@@ -179,11 +177,10 @@ const ContactForm = () => {
                 placeholder="Verification (e.g. 12)"
                 value={form.verify}
                 onChange={handleChange}
-                className="px-6 py-5 text-base rounded-xl border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#0D6E4F]"
+                className="px-6 py-5 rounded-xl border border-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#0D6E4F]"
               />
 
-              {/* BUTTON */}
-              <button className="group px-8 py-5 rounded-xl bg-[#0D6E4F] text-white font-bold text-lg shadow-lg hover:bg-[#0b5c42] transition flex items-center justify-center gap-2">
+              <button className="px-8 py-5 rounded-xl bg-[#0D6E4F] text-white font-bold text-lg hover:bg-[#0b5c42] transition flex items-center justify-center gap-2">
 
                 Send Message
                 <Send size={18} />

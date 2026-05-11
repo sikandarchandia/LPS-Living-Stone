@@ -38,7 +38,7 @@ const Navbar = () => {
           className={`
             transition-all duration-500 border-b
             ${isScrolled
-              ? 'bg-white/90 backdrop-blur-2xl shadow-lg border-[#E5E7EB] py-3'
+              ? 'bg-white/95 backdrop-blur-2xl shadow-lg border-[#E5E7EB] py-3'
               : 'bg-white py-5 border-transparent'
             }
           `}
@@ -59,7 +59,7 @@ const Navbar = () => {
                 src={logo}
                 alt="logo"
                 className={`transition-all duration-300 ${
-                  isScrolled ? 'h-14' : 'h-16'
+                  isScrolled ? 'h-16' : 'h-18'
                 }`}
               />
 
@@ -144,7 +144,7 @@ const Navbar = () => {
             <div className="flex items-center justify-between px-5 py-5 border-b border-[#E5E7EB]">
 
               <div className="flex items-center gap-3">
-                <img src={logo} className="h-10" />
+                <img src={logo} className="h-12" />
                 <div className="leading-tight">
                   <h1 className="text-[#0D2040] font-bold text-sm">
                     Living Stone
@@ -182,14 +182,9 @@ const Navbar = () => {
                     transition-all duration-300
                   "
                 >
-                  <span>
-                    {link.name}
-                  </span>
+                  <span>{link.name}</span>
 
-                  <ChevronRight
-                    size={18}
-                    className="text-[#0D6E4F]"
-                  />
+                  <ChevronRight size={18} className="text-[#0D6E4F]" />
                 </a>
               ))}
 

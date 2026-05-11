@@ -44,11 +44,11 @@ const ScrollToTop = () => {
           rounded-full
           flex items-center justify-center
 
-          bg-[#0D2040]/95
-          backdrop-blur-2xl
+          bg-white/90
+          backdrop-blur-xl
 
-          border border-[#0D6E4F]/20
-          shadow-[0_10px_40px_rgba(13,32,64,0.35)]
+          border border-[#E5E7EB]
+          shadow-[0_10px_30px_rgba(13,32,64,0.15)]
 
           hover:scale-110 active:scale-95
           transition-all duration-300
@@ -56,10 +56,10 @@ const ScrollToTop = () => {
         "
       >
         {/* subtle background glow */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(13,110,79,0.18),transparent_70%)] opacity-80" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(13,110,79,0.15),transparent_70%)] opacity-70" />
 
         {/* Glow ring background */}
-        <div className="absolute inset-0 rounded-full blur-md opacity-0 group-hover:opacity-100 bg-[#0D6E4F]/25 transition duration-300" />
+        <div className="absolute inset-0 rounded-full blur-md opacity-0 group-hover:opacity-100 bg-[#0D6E4F]/20 transition duration-300" />
 
         {/* Progress Ring */}
         <svg className="absolute w-full h-full -rotate-90">
@@ -67,7 +67,7 @@ const ScrollToTop = () => {
             cx="50%"
             cy="50%"
             r="24"
-            stroke="rgba(255,255,255,0.10)"
+            stroke="#E5E7EB"
             strokeWidth="3"
             fill="none"
           />
@@ -86,11 +86,11 @@ const ScrollToTop = () => {
           />
         </svg>
 
-        {/* Floating Icon */}
+        {/* Icon */}
         <ArrowUp
           size={20}
           className="
-            text-white
+            text-[#0D2040]
             group-hover:text-[#0D6E4F]
             transition-all duration-300
             relative z-10

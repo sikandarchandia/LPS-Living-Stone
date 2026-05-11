@@ -17,31 +17,31 @@ const FreeResources = () => {
   const [active, setActive] = useState(0);
 
   return (
-    <div className="bg-[#F5F7FA]">
+    <div className="bg-white">
 
       {/* ================= HERO ================= */}
-      <section className="relative py-28 text-white overflow-hidden">
+      <section className="relative py-28 overflow-hidden bg-white">
 
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0D2340] via-[#0D2340] to-[#0D6E4F]" />
+        {/* soft premium glow (no dark gradient anymore) */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-[#F9FAFB]" />
 
-        {/* glow */}
-        <div className="absolute -top-40 left-[-120px] w-[520px] h-[520px] bg-[#0D6E4F]/20 blur-3xl rounded-full" />
-        <div className="absolute bottom-[-160px] right-[-120px] w-[520px] h-[520px] bg-[#0D6E4F]/20 blur-3xl rounded-full" />
+        <div className="absolute -top-40 left-[-120px] w-[520px] h-[520px] bg-[#0D6E4F]/5 blur-3xl rounded-full" />
+        <div className="absolute bottom-[-160px] right-[-120px] w-[520px] h-[520px] bg-[#0D2040]/5 blur-3xl rounded-full" />
 
         <div className="relative max-w-5xl mx-auto px-6 text-center">
 
           {/* badge */}
-          <div className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white/10 border border-white/20 text-[#0D6E4F] text-xs uppercase tracking-[0.25em]">
+          <div className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white border border-[#E5E7EB] text-[#0D6E4F] text-xs uppercase tracking-[0.25em] shadow-sm">
             <Sparkles size={14} />
             Free Resources
           </div>
 
-          {/* 🔥 BIGGER TITLE */}
-          <h1 className="mt-8 text-5xl md:text-6xl font-black leading-tight">
+          {/* title */}
+          <h1 className="mt-8 text-5xl md:text-6xl font-black text-[#0D2040] leading-tight">
             Tax & Business Knowledge Hub
           </h1>
 
-          <p className="mt-5 text-white/75 text-lg md:text-xl max-w-2xl mx-auto leading-8">
+          <p className="mt-5 text-[#6B7280] text-lg md:text-xl max-w-2xl mx-auto leading-8">
             Explore expert answers, tax updates, and essential accounting guidance
             for UK businesses and professionals.
           </p>
@@ -50,7 +50,7 @@ const FreeResources = () => {
       </section>
 
       {/* ================= ACCORDION ================= */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
 
         <div className="max-w-5xl mx-auto px-6 space-y-6">
 
@@ -65,8 +65,8 @@ const FreeResources = () => {
                   rounded-3xl
                   border border-[#E5E7EB]
                   shadow-sm
-                  hover:shadow-lg
-                  transition
+                  hover:shadow-md
+                  transition-all duration-300
                   overflow-hidden
                 "
               >
@@ -81,7 +81,7 @@ const FreeResources = () => {
                   "
                 >
 
-                  <span className="text-lg md:text-xl font-bold text-[#0D2340]">
+                  <span className="text-lg md:text-xl font-bold text-[#0D2040]">
                     {item.title}
                   </span>
 

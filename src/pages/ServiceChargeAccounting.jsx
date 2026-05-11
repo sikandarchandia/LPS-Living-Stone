@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
 
 import img from '../assets/flat.png';
 
@@ -19,24 +19,24 @@ const services = [
 
 const ServiceChargeAccounting = () => {
   return (
-    <div className="bg-[#F5F7FA] overflow-hidden">
+    <div className="bg-white overflow-hidden">
 
       {/* ================= HERO ================= */}
-      <section className="relative py-28 text-white overflow-hidden">
+      <section className="relative py-28 overflow-hidden bg-white">
 
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0D2340] via-[#0D2340] to-[#0D6E4F]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-[#F9FAFB]" />
 
-        {/* glow */}
-        <div className="absolute -top-40 left-[-120px] w-[520px] h-[520px] bg-[#0D6E4F]/20 blur-3xl rounded-full" />
-        <div className="absolute bottom-[-180px] right-[-120px] w-[520px] h-[520px] bg-[#0D6E4F]/20 blur-3xl rounded-full" />
+        {/* soft glow */}
+        <div className="absolute -top-40 left-[-120px] w-[520px] h-[520px] bg-[#0D6E4F]/5 blur-3xl rounded-full" />
+        <div className="absolute bottom-[-180px] right-[-120px] w-[520px] h-[520px] bg-[#0D2040]/5 blur-3xl rounded-full" />
 
         <div className="relative max-w-5xl mx-auto px-6 text-center">
 
-          <h1 className="text-4xl md:text-6xl font-black leading-tight">
+          <h1 className="text-4xl md:text-6xl font-black leading-tight text-[#0D2040]">
             Service Charge Accounting
           </h1>
 
-          <p className="mt-6 text-white/75 text-lg md:text-xl leading-8 max-w-3xl mx-auto">
+          <p className="mt-6 text-[#6B7280] text-lg md:text-xl leading-8 max-w-3xl mx-auto">
             Leading specialists in service charge accounting for residential and
             commercial properties across London and the UK.
           </p>
@@ -56,7 +56,7 @@ const ServiceChargeAccounting = () => {
           </p>
 
           <p className="mt-5">
-            We currently support over <b className="text-[#0D2340]">600+ service charge clients</b>
+            We currently support over <b className="text-[#0D2040]">600+ service charge clients</b>
             nationwide with accuracy, compliance, and transparent reporting.
           </p>
 
@@ -64,7 +64,7 @@ const ServiceChargeAccounting = () => {
       </section>
 
       {/* ================= IMAGE + SERVICES ================= */}
-      <section className="py-20 md:py-28">
+      <section className="py-20 md:py-28 bg-white">
 
         <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-14 items-center">
 
@@ -77,7 +77,7 @@ const ServiceChargeAccounting = () => {
             <img
               src={img}
               alt="Service charge accounting illustration"
-              className="rounded-3xl shadow-2xl w-full object-cover h-[440px]"
+              className="rounded-3xl shadow-lg w-full object-cover h-[440px]"
             />
           </motion.div>
 
@@ -88,7 +88,7 @@ const ServiceChargeAccounting = () => {
             transition={{ duration: 0.7 }}
           >
 
-            <h2 className="text-3xl md:text-4xl font-black text-[#0D2340]">
+            <h2 className="text-3xl md:text-4xl font-black text-[#0D2040]">
               Complete Service Charge Solutions
             </h2>
 
@@ -107,13 +107,13 @@ const ServiceChargeAccounting = () => {
                     bg-white
                     border border-[#E5E7EB]
                     p-5 rounded-2xl
-                    shadow-sm hover:shadow-md
-                    transition
+                    hover:shadow-md
+                    transition-all duration-300
                   "
                 >
                   <CheckCircle2 className="text-[#0D6E4F] mt-1" size={18} />
 
-                  <span className="text-[#0D2340] text-base leading-7 font-medium">
+                  <span className="text-[#0D2040] text-base leading-7 font-medium">
                     {item}
                   </span>
 
@@ -133,7 +133,7 @@ const ServiceChargeAccounting = () => {
         <div className="max-w-5xl mx-auto px-6 space-y-12 text-[#6B7280] text-base leading-8">
 
           <div>
-            <h3 className="text-2xl font-black text-[#0D2340] mb-3">
+            <h3 className="text-2xl font-black text-[#0D2040] mb-3">
               Guidance & Standards
             </h3>
             <p>
@@ -143,7 +143,7 @@ const ServiceChargeAccounting = () => {
           </div>
 
           <div>
-            <h3 className="text-2xl font-black text-[#0D2340] mb-3">
+            <h3 className="text-2xl font-black text-[#0D2040] mb-3">
               Legal Framework
             </h3>
             <ul className="list-disc pl-6 space-y-2">
@@ -155,7 +155,7 @@ const ServiceChargeAccounting = () => {
           </div>
 
           <div>
-            <h3 className="text-2xl font-black text-[#0D2340] mb-3">
+            <h3 className="text-2xl font-black text-[#0D2040] mb-3">
               Tribunal Support
             </h3>
             <p>
@@ -168,11 +168,11 @@ const ServiceChargeAccounting = () => {
       </section>
 
       {/* ================= CTA ================= */}
-      <section className="relative py-24 text-white overflow-hidden">
+      <section className="relative py-24 overflow-hidden bg-white">
 
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0D2340] to-[#0D6E4F]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0D2040] to-[#0D6E4F]" />
 
-        <div className="relative max-w-3xl mx-auto px-6 text-center">
+        <div className="relative max-w-3xl mx-auto px-6 text-center text-white">
 
           <h2 className="text-3xl md:text-5xl font-black">
             Need Expert Service Charge Support?
@@ -190,7 +190,7 @@ const ServiceChargeAccounting = () => {
               bg-[#0D6E4F]
               hover:bg-[#0b5c42]
               font-bold
-              shadow-lg
+              shadow-md
               transition
             "
           >

@@ -47,24 +47,24 @@ const ShortServices = () => {
           onClick={() => navigate(section.path)}
           className="
             group relative cursor-pointer
-            rounded-[28px]
+            rounded-3xl
             overflow-hidden
             border border-[#E5E7EB]
             bg-white
             shadow-sm
             transition-all duration-500
             hover:-translate-y-2
-            hover:shadow-[0_25px_60px_-20px_rgba(13,110,79,0.25)]
+            hover:shadow-[0_20px_50px_-20px_rgba(13,110,79,0.20)]
           "
         >
 
-          {/* TOP GREEN BAR */}
-          <div className="h-1 w-full bg-gradient-to-r from-[#0D6E4F] to-[#13a37a]" />
+          {/* TOP ACCENT BAR */}
+          <div className="h-1 w-full bg-gradient-to-r from-[#0D6E4F] to-[#0D2040]" />
 
-          {/* ANGLED CUT EFFECT */}
-          <div className="absolute inset-0">
-            <div className="absolute -top-10 -right-10 w-24 h-24 bg-[#0D6E4F]/10 rotate-45 blur-xl opacity-0 group-hover:opacity-100 transition" />
-            <div className="absolute bottom-[-40px] left-[-40px] w-32 h-32 bg-[#0D2040]/10 blur-2xl opacity-0 group-hover:opacity-100 transition" />
+          {/* soft glow accents */}
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute -top-10 -right-10 w-28 h-28 bg-[#0D6E4F]/5 blur-2xl opacity-0 group-hover:opacity-100 transition" />
+            <div className="absolute bottom-[-40px] left-[-40px] w-36 h-36 bg-[#0D2040]/5 blur-2xl opacity-0 group-hover:opacity-100 transition" />
           </div>
 
           {/* CONTENT */}
@@ -73,7 +73,7 @@ const ShortServices = () => {
             {/* TITLE */}
             <h3
               className="
-                text-lg font-black text-[#0D2040]
+                text-lg font-bold text-[#0D2040]
                 group-hover:text-[#0D6E4F]
                 transition-all duration-300
               "
@@ -88,14 +88,15 @@ const ShortServices = () => {
 
             {/* ITEMS */}
             <div className="mt-5 space-y-2">
+
               {section.items.map((item, j) => (
                 <div
                   key={j}
                   className="
                     flex items-center justify-between
                     px-3 py-2 rounded-xl
-                    bg-[#F5F7FA]
-                    hover:bg-[#EAF6F1]
+                    bg-[#F9FAFB]
+                    hover:bg-[#F0FAF5]
                     transition-all duration-300
                     group/item
                   "
@@ -109,6 +110,7 @@ const ShortServices = () => {
                   </span>
                 </div>
               ))}
+
             </div>
 
             {/* FOOTER ACTION */}
@@ -122,7 +124,7 @@ const ShortServices = () => {
                 className="
                   w-9 h-9
                   rounded-full
-                  bg-gradient-to-r from-[#0D6E4F] to-[#13a37a]
+                  bg-[#0D6E4F]
                   text-white
                   flex items-center justify-center
                   shadow-md
