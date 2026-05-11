@@ -39,115 +39,102 @@ const ShortServices = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="space-y-5">
+    <div className="space-y-6">
 
       {data.map((section, i) => (
         <div
           key={i}
           onClick={() => navigate(section.path)}
           className="
-            group
-            relative
-            bg-white
-            rounded-3xl
-            border border-[#E5E7EB]
-            shadow-sm
-            hover:shadow-2xl
-            transition-all duration-300
-            p-5
-            cursor-pointer
+            group relative cursor-pointer
+            rounded-[28px]
             overflow-hidden
-            hover:-translate-y-1
+            border border-[#E5E7EB]
+            bg-white
+            shadow-sm
+            transition-all duration-500
+            hover:-translate-y-2
+            hover:shadow-[0_25px_60px_-20px_rgba(13,110,79,0.25)]
           "
         >
 
-          {/* top glow */}
-          <div className="absolute top-0 left-0 w-full h-1 bg-[#0D6E4F]" />
+          {/* TOP GREEN BAR */}
+          <div className="h-1 w-full bg-gradient-to-r from-[#0D6E4F] to-[#13a37a]" />
 
-          {/* background hover glow */}
-          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-[radial-gradient(circle_at_top_right,rgba(13,110,79,0.06),transparent_45%)]" />
+          {/* ANGLED CUT EFFECT */}
+          <div className="absolute inset-0">
+            <div className="absolute -top-10 -right-10 w-24 h-24 bg-[#0D6E4F]/10 rotate-45 blur-xl opacity-0 group-hover:opacity-100 transition" />
+            <div className="absolute bottom-[-40px] left-[-40px] w-32 h-32 bg-[#0D2040]/10 blur-2xl opacity-0 group-hover:opacity-100 transition" />
+          </div>
 
-          {/* TITLE */}
-          <h3
-            className="
-              relative
-              text-[#0D2040]
-              font-extrabold
-              text-lg
-              transition-all duration-300
-              group-hover:text-[#0D6E4F]
-            "
-          >
-            {section.title}
-          </h3>
+          {/* CONTENT */}
+          <div className="relative p-6">
 
-          {/* TAGLINE */}
-          <p className="relative text-xs text-[#6B7280] mt-1 mb-4 leading-5">
-            {section.desc}
-          </p>
-
-          {/* ITEMS */}
-          <ul className="space-y-2">
-
-            {section.items.map((item, j) => (
-              <li
-                key={j}
-                className="
-                  relative
-                  text-sm text-[#6B7280]
-                  hover:text-[#0D6E4F]
-                  flex items-center justify-between
-                  transition-all duration-200
-                  group/item
-                "
-              >
-                <span>
-                  {item.name}
-                </span>
-
-                <span
-                  className="
-                    text-[#0D6E4F]
-                    font-bold
-                    transition-all duration-300
-                    group-hover/item:translate-x-1
-                  "
-                >
-                  ▹
-                </span>
-              </li>
-            ))}
-
-          </ul>
-
-          {/* bottom action */}
-          <div
-            className="
-              relative
-              mt-5
-              pt-4
-              border-t border-[#E5E7EB]
-              flex items-center justify-between
-            "
-          >
-            <span className="text-xs font-semibold text-[#0D2040]">
-              Explore Services
-            </span>
-
-            <div
+            {/* TITLE */}
+            <h3
               className="
-                w-8 h-8
-                rounded-full
-                bg-[#0D6E4F]
-                text-white
-                flex items-center justify-center
-                text-sm
+                text-lg font-black text-[#0D2040]
+                group-hover:text-[#0D6E4F]
                 transition-all duration-300
-                group-hover:translate-x-1
               "
             >
-              →
+              {section.title}
+            </h3>
+
+            {/* DESC */}
+            <p className="mt-2 text-xs text-[#6B7280] leading-5">
+              {section.desc}
+            </p>
+
+            {/* ITEMS */}
+            <div className="mt-5 space-y-2">
+              {section.items.map((item, j) => (
+                <div
+                  key={j}
+                  className="
+                    flex items-center justify-between
+                    px-3 py-2 rounded-xl
+                    bg-[#F5F7FA]
+                    hover:bg-[#EAF6F1]
+                    transition-all duration-300
+                    group/item
+                  "
+                >
+                  <span className="text-sm text-[#0D2040] group-hover/item:text-[#0D6E4F] transition">
+                    {item.name}
+                  </span>
+
+                  <span className="text-[#0D6E4F] font-bold group-hover/item:translate-x-1 transition">
+                    →
+                  </span>
+                </div>
+              ))}
             </div>
+
+            {/* FOOTER ACTION */}
+            <div className="mt-6 flex items-center justify-between border-t border-[#E5E7EB] pt-4">
+
+              <span className="text-xs font-semibold text-[#0D2040]">
+                Explore Category
+              </span>
+
+              <div
+                className="
+                  w-9 h-9
+                  rounded-full
+                  bg-gradient-to-r from-[#0D6E4F] to-[#13a37a]
+                  text-white
+                  flex items-center justify-center
+                  shadow-md
+                  group-hover:rotate-12 group-hover:scale-110
+                  transition-all duration-300
+                "
+              >
+                →
+              </div>
+
+            </div>
+
           </div>
 
         </div>
