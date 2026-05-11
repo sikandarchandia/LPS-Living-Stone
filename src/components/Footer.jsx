@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaFacebookF, FaTwitter, FaLinkedinIn } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -8,9 +9,6 @@ const Footer = () => {
       <div className="absolute top-[-140px] left-[-140px] w-[260px] h-[260px] bg-[#0D6E4F]/10 blur-3xl rounded-full" />
       <div className="absolute bottom-[-140px] right-[-140px] w-[260px] h-[260px] bg-[#0D2040]/10 blur-3xl rounded-full" />
 
-      {/* overlay subtle texture */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white via-white to-[#F8FAFC]" />
-
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 py-12">
 
         {/* TOP SECTION */}
@@ -18,7 +16,6 @@ const Footer = () => {
 
           {/* LINKS */}
           <div>
-
             <h3 className="text-sm font-bold uppercase tracking-widest text-[#0D2040]">
               Quick Links
             </h3>
@@ -26,7 +23,6 @@ const Footer = () => {
             <div className="w-12 h-[2px] bg-[#0D6E4F] rounded-full mt-3 mb-5" />
 
             <ul className="space-y-3 text-sm text-[#0D2040]/70">
-
               {[
                 'Home',
                 'About Us',
@@ -37,26 +33,16 @@ const Footer = () => {
                 'Contact Us',
               ].map((item, i) => (
                 <li key={i}>
-                  <a
-                    href="#"
-                    className="
-                      hover:text-[#0D6E4F]
-                      transition-all duration-300
-                      font-medium
-                    "
-                  >
+                  <a className="hover:text-[#0D6E4F] transition font-medium">
                     {item}
                   </a>
                 </li>
               ))}
-
             </ul>
-
           </div>
 
           {/* CONTACT */}
           <div>
-
             <h3 className="text-sm font-bold uppercase tracking-widest text-[#0D2040]">
               Contact Us
             </h3>
@@ -81,11 +67,24 @@ const Footer = () => {
               <p className="text-[#0D6E4F] font-medium">
                 Chartered Accountants & Business Advisors
               </p>
+            </div>
 
+            {/* SOCIAL ICONS */}
+            <div className="flex items-center gap-3 mt-6">
+              <a className="p-2 rounded-full bg-[#F5F7FA] hover:bg-[#0D6E4F]/10 transition">
+                <FaFacebookF className="text-[#0D2040]" />
+              </a>
+
+              <a className="p-2 rounded-full bg-[#F5F7FA] hover:bg-[#0D6E4F]/10 transition">
+                <FaTwitter className="text-[#0D2040]" />
+              </a>
+
+              <a className="p-2 rounded-full bg-[#F5F7FA] hover:bg-[#0D6E4F]/10 transition">
+                <FaLinkedinIn className="text-[#0D2040]" />
+              </a>
             </div>
 
           </div>
-
         </div>
 
         {/* BOTTOM BAR */}
@@ -96,17 +95,19 @@ const Footer = () => {
           </p>
 
           <div className="flex items-center gap-4 text-xs text-[#0D2040]/60">
-
             <span className="hover:text-[#0D6E4F] cursor-pointer transition">
               Privacy Policy
             </span>
-
             <span className="hover:text-[#0D6E4F] cursor-pointer transition">
               Terms
             </span>
-
           </div>
 
+        </div>
+
+        {/* ================= NEW GREEN LINE ================= */}
+        <div className="mt-8 bg-[#0D6E4F] text-white text-center py-3 rounded-xl text-sm font-medium tracking-wide shadow-md">
+          © 2026 LPS Accountants — Built with precision, trusted by businesses worldwide. All rights reserved.
         </div>
 
       </div>

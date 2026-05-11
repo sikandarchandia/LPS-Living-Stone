@@ -17,38 +17,39 @@ const features = [
 
 const AccountsTaxation = () => {
   return (
-    <div className="bg-[#f5f8ff] overflow-hidden">
+    <div className="bg-white overflow-hidden font-['Neogrotesk']">
 
       {/* ================= HERO ================= */}
       <section className="relative overflow-hidden py-20 md:py-32 text-white">
 
-        <div className="absolute inset-0 bg-gradient-to-br from-[#04152d] via-[#0d2f68] to-[#0a3d91]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#041b3a] via-[#0a2d6b] to-[#0097C2]" />
 
         {/* Glow */}
-        <div className="absolute top-[-120px] left-[-120px] w-[280px] md:w-[450px] h-[280px] md:h-[450px] bg-cyan-400/20 blur-[100px] rounded-full" />
-        <div className="absolute bottom-[-120px] right-[-120px] w-[280px] md:w-[450px] h-[280px] md:h-[450px] bg-blue-500/20 blur-[120px] rounded-full" />
+        <div className="absolute top-[-120px] left-[-120px] w-[360px] md:w-[520px] h-[360px] md:h-[520px] bg-[#0097C2]/25 blur-[130px] rounded-full" />
+        <div className="absolute bottom-[-120px] right-[-120px] w-[360px] md:w-[520px] h-[360px] md:h-[520px] bg-[#0A2D6B]/25 blur-[130px] rounded-full" />
 
         <div className="relative max-w-6xl mx-auto px-5 text-center">
 
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-xl text-xs md:text-sm">
-            <Landmark size={14} />
+          {/* ICON BIGGER */}
+          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-white/10 border border-white/20 backdrop-blur-xl text-sm md:text-base">
+            <Landmark size={20} />
             Accounts & Taxation Services
           </div>
 
-          <h1 className="mt-6 md:mt-8 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight">
+          <h1 className="mt-8 md:mt-10 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-tight">
             Elite Financial
-            <span className="block text-cyan-300">Control System</span>
+            <span className="block text-[#0097C2]">Control System</span>
           </h1>
 
-          <p className="mt-5 md:mt-6 text-white/70 text-sm md:text-lg max-w-3xl mx-auto leading-7 md:leading-8">
-            Strategic accounting and taxation services designed to give you full control over your business performance and compliance.
+          <p className="mt-6 text-white/80 text-base md:text-xl max-w-3xl mx-auto leading-8">
+            Strategic accounting and taxation services designed to give you full control over business performance and compliance.
           </p>
 
         </div>
       </section>
 
       {/* ================= MAIN ================= */}
-      <section className="py-16 md:py-28">
+      <section className="py-16 md:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-5 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
           {/* LEFT */}
@@ -58,34 +59,35 @@ const AccountsTaxation = () => {
             viewport={{ once: true }}
           >
 
-            <div className="flex items-center gap-2 text-cyan-600 font-semibold text-sm md:text-base">
-              <TrendingUp size={16} />
+            <div className="flex items-center gap-3 text-[#0A2D6B] font-semibold text-base md:text-lg">
+              <TrendingUp size={20} className="text-[#0097C2]" />
               Year-End Strategic Accounting
             </div>
 
-            <h2 className="mt-3 text-2xl md:text-4xl lg:text-5xl font-black text-[#0b2b61] leading-snug">
+            <h2 className="mt-4 text-3xl md:text-5xl font-black text-[#0A2D6B] leading-snug">
               We Don’t Just Prepare Accounts
-              <span className="block text-cyan-500">We Engineer Growth</span>
+              <span className="block text-[#0097C2]">We Engineer Growth</span>
             </h2>
 
-            <p className="mt-5 text-gray-600 text-sm md:text-base leading-7">
-              At LPS, accounts are used as a real-time decision tool to control costs and improve profitability throughout the year.
+            {/* TEXT NOW BLUE/GREEN (NO GREY) */}
+            <p className="mt-6 text-[#0A2D6B] leading-8 text-base md:text-lg">
+              At LPS, accounts are used as a real-time decision tool to improve profitability throughout the year.
             </p>
 
-            <p className="mt-3 text-gray-600 text-sm md:text-base leading-7">
-              We stay actively involved so your decisions are always financially optimized.
+            <p className="mt-4 text-[#0097C2] leading-8 text-base md:text-lg">
+              We stay actively involved so your financial decisions are always optimized.
             </p>
 
             {/* FEATURES */}
-            <div className="mt-8 md:mt-10 grid gap-3 md:gap-4">
+            <div className="mt-10 grid gap-4">
 
               {features.map((item, i) => (
                 <div
                   key={i}
-                  className="flex items-start gap-3 p-4 rounded-xl md:rounded-2xl bg-white shadow-sm border border-slate-100 hover:shadow-md transition"
+                  className="flex items-start gap-3 p-5 rounded-2xl bg-white border border-[#E5E7EB] shadow-sm hover:shadow-md transition"
                 >
-                  <CheckCircle2 className="text-cyan-500 mt-1" size={18} />
-                  <span className="text-slate-700 text-sm md:text-base font-medium leading-6">
+                  <CheckCircle2 className="text-[#0097C2] mt-1" size={20} />
+                  <span className="text-[#0A2D6B] text-base md:text-lg font-medium leading-7">
                     {item}
                   </span>
                 </div>
@@ -102,25 +104,17 @@ const AccountsTaxation = () => {
             className="relative space-y-6 md:space-y-8"
           >
 
-            <div className="rounded-2xl md:rounded-[30px] overflow-hidden shadow-xl">
-              <img
-                src={img1}
-                alt="Accounts overview"
-                className="w-full h-56 md:h-[320px] object-cover"
-              />
+            <div className="rounded-[28px] overflow-hidden shadow-xl">
+              <img src={img1} className="w-full h-64 md:h-[360px] object-cover" />
             </div>
 
-            <div className="rounded-2xl md:rounded-[30px] overflow-hidden shadow-xl">
-              <img
-                src={img2}
-                alt="Taxation support"
-                className="w-full h-56 md:h-[320px] object-cover"
-              />
+            <div className="rounded-[28px] overflow-hidden shadow-xl">
+              <img src={img2} className="w-full h-64 md:h-[360px] object-cover" />
             </div>
 
-            {/* Floating badge */}
-            <div className="absolute bottom-4 left-4 md:left-10 bg-white/90 backdrop-blur-xl shadow-lg px-4 py-3 rounded-xl text-xs md:text-sm font-bold flex items-center gap-2">
-              <ShieldCheck className="text-cyan-500" size={16} />
+            {/* BADGE BIGGER */}
+            <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-xl shadow-lg px-5 py-3 rounded-xl text-sm font-bold flex items-center gap-2 text-[#0A2D6B]">
+              <ShieldCheck className="text-[#0097C2]" size={18} />
               Trusted Experts
             </div>
 
@@ -130,32 +124,28 @@ const AccountsTaxation = () => {
       </section>
 
       {/* ================= CTA ================= */}
-      <section className="relative py-20 md:py-28 overflow-hidden">
+      <section className="relative py-24 overflow-hidden">
 
-        <div className="absolute inset-0 bg-gradient-to-r from-[#04142d] to-[#0a3d91]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0A2D6B] to-[#0097C2]" />
 
         <div className="relative max-w-3xl mx-auto px-5 text-center text-white">
 
-          <h2 className="text-2xl md:text-4xl lg:text-5xl font-black leading-snug">
+          <h2 className="text-3xl md:text-5xl font-black leading-snug">
             Build a Smarter Financial Future
           </h2>
 
-          <p className="mt-5 text-white/70 text-sm md:text-base leading-7">
+          <p className="mt-6 text-white/80 text-base md:text-lg leading-7">
             Book a free consultation with our expert accountants today.
           </p>
 
-          <button className="mt-8 md:mt-10 w-full sm:w-auto group relative overflow-hidden px-8 md:px-10 py-4 md:py-5 rounded-2xl bg-gradient-to-r from-cyan-400 to-blue-600 font-bold hover:scale-[1.02] transition">
+          <button className="mt-10 w-full sm:w-auto px-10 py-5 rounded-2xl bg-white text-[#0A2D6B] font-bold hover:scale-105 transition flex items-center justify-center gap-3">
 
-            <span className="absolute top-0 left-[-120%] w-[40%] h-full bg-white/30 rotate-12 blur-md group-hover:left-[140%] transition-all duration-1000" />
-
-            <span className="relative flex items-center justify-center gap-2 md:gap-3 text-sm md:text-base">
-              Free Consultation
-              <ArrowRight size={18} />
-            </span>
+            Free Consultation
+            <ArrowRight size={18} />
 
           </button>
 
-          <p className="mt-5 text-white/60 text-sm">
+          <p className="mt-6 text-white/70 text-sm">
             Call: 020 7278 0007
           </p>
 
