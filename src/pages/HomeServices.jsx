@@ -40,7 +40,7 @@ const HomeServices = () => {
         {/* Dark overlay (better contrast) */}
         <div className="absolute inset-0 bg-[#071A2B]/30" />
 
-        {/* Green glow (kept your theme) */}
+        {/* Green glow */}
         <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-[#0D6E4F]/20 blur-3xl rounded-full" />
         <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-[#0D6E4F]/25 blur-3xl rounded-full" />
 
@@ -52,53 +52,31 @@ const HomeServices = () => {
           transition={{ staggerChildren: 0.12 }}
           className="relative z-10 text-center max-w-5xl px-5"
         >
-          {/* 🔥 BIGGER TITLE */}
           <motion.h1
             variants={fadeUp}
-            className="
-              mt-7
-              text-white
-              text-4xl sm:text-6xl
-              font-bold
-              leading-tight
-            "
+            className="mt-7 text-white text-4xl sm:text-6xl font-bold leading-tight"
           >
             Trusted Accounting & Tax Advisory
           </motion.h1>
 
-          {/* GREEN BACKGROUND SUBTITLE (FIXED READABILITY ISSUE) */}
           <motion.div
             variants={fadeUp}
-            className="
-              mt-4 inline-block
-              px-4 py-2
-              bg-[#0D6E4F]/40
-              rounded-lg
-              border border-[#0D6E4F]/60
-            "
+            className="mt-4 inline-block px-4 py-2 bg-[#0D6E4F]/40 rounded-lg border border-[#0D6E4F]/60"
           >
             <h2 className="text-white text-xl sm:text-3xl font-semibold">
               for UK Businesses & Individuals
             </h2>
           </motion.div>
 
-          {/* DESCRIPTION (BIGGER) */}
           <motion.p
             variants={fadeUp}
-            className="
-              mt-6
-              text-white/85
-              text-base sm:text-xl
-              leading-8
-              max-w-3xl mx-auto
-            "
+            className="mt-6 text-white/85 text-base sm:text-xl leading-8 max-w-3xl mx-auto"
           >
             We provide clear, compliant and commercially focused accounting
             services for businesses, landlords, contractors and professionals
             across the UK.
           </motion.p>
 
-          {/* CTA */}
           <motion.div
             variants={fadeUp}
             className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
@@ -129,21 +107,54 @@ const HomeServices = () => {
         </motion.div>
       </div>
 
-      {/* ================= STATS ================= */}
+      {/* ================= STATS (UPDATED DESIGN) ================= */}
       <section className="py-14 bg-white border-b border-[#E5E7EB]">
         <div className="max-w-6xl mx-auto px-5 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
 
           {stats.map((s, i) => (
             <div
               key={i}
-              className="bg-white border border-[#E5E7EB] rounded-2xl py-8 px-4 shadow-sm hover:shadow-xl transition"
+              className="
+                group
+                relative
+                overflow-hidden
+                rounded-2xl
+                py-10 px-4
+                bg-[#0D6E4F]
+                border border-[#0D6E4F]
+                shadow-md
+                transition-all duration-300
+                hover:bg-white
+                hover:shadow-2xl
+                hover:-translate-y-1
+              "
             >
-              <h3 className="text-3xl font-bold text-[#0D2040]">
+
+              {/* glow */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300 bg-[radial-gradient(circle_at_top,rgba(13,110,79,0.08),transparent_60%)]" />
+
+              {/* VALUE */}
+              <h3 className="
+                relative
+                text-3xl font-black
+                text-white
+                group-hover:text-[#0D6E4F]
+                transition-colors duration-300
+              ">
                 {s.value}
               </h3>
-              <p className="mt-2 text-sm text-[#6B7280]">
+
+              {/* LABEL */}
+              <p className="
+                relative
+                mt-2 text-sm
+                text-white/80
+                group-hover:text-[#0D2040]
+                transition-colors duration-300
+              ">
                 {s.label}
               </p>
+
             </div>
           ))}
 
@@ -211,7 +222,6 @@ const HomeServices = () => {
 
           </motion.div>
 
-          {/* Video Card */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
