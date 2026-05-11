@@ -3,7 +3,7 @@ import ShortServices from './ShortServices';
 
 const Layout = ({ children }) => {
   return (
-    <div className="bg-white min-h-screen w-full">
+    <div className="bg-[#ECE5DD] min-h-screen w-full">
 
       {/* soft premium background glow */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
           <main className="w-[80%] min-w-0 order-1">
             <div
               className="
-                bg-white
+                bg-[#ECE5DD]
                 border border-[#E5E7EB]
                 shadow-sm
                 rounded-2xl
@@ -45,7 +45,7 @@ const Layout = ({ children }) => {
 
           <div
             className="
-              bg-white
+              bg-[#ECE5DD]
               rounded-2xl
               shadow-sm
               border border-[#E5E7EB]
@@ -66,7 +66,7 @@ const Layout = ({ children }) => {
 
           <div
             className="
-              bg-white
+              bg-[#ECE5DD]
               rounded-2xl
               shadow-sm
               border border-[#E5E7EB]

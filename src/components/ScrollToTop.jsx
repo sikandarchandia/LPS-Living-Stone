@@ -22,10 +22,7 @@ const ScrollToTop = () => {
   }, []);
 
   const scrollTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
@@ -33,7 +30,7 @@ const ScrollToTop = () => {
       className={`
         fixed right-5 bottom-5 z-[999]
         transition-all duration-500
-        ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8 pointer-events-none'}
+        ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'}
       `}
     >
       <button
@@ -44,22 +41,25 @@ const ScrollToTop = () => {
           rounded-full
           flex items-center justify-center
 
-          bg-white/90
+          bg-white/95
           backdrop-blur-xl
 
-          border border-[#E5E7EB]
-          shadow-[0_10px_30px_rgba(13,32,64,0.15)]
+          border border-[#D9D9D9]
+          shadow-lg
 
+          hover:shadow-[0_15px_40px_rgba(13,110,79,0.25)]
           hover:scale-110 active:scale-95
+
           transition-all duration-300
           overflow-hidden
         "
       >
-        {/* subtle background glow */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(13,110,79,0.15),transparent_70%)] opacity-70" />
 
-        {/* Glow ring background */}
-        <div className="absolute inset-0 rounded-full blur-md opacity-0 group-hover:opacity-100 bg-[#0D6E4F]/20 transition duration-300" />
+        {/* soft green glow (brand identity) */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(13,110,79,0.18),transparent_70%)] opacity-80" />
+
+        {/* hover glow ring */}
+        <div className="absolute inset-0 rounded-full bg-[#0D6E4F]/10 opacity-0 group-hover:opacity-100 blur-xl transition duration-300" />
 
         {/* Progress Ring */}
         <svg className="absolute w-full h-full -rotate-90">
@@ -82,7 +82,7 @@ const ScrollToTop = () => {
             strokeDasharray="150"
             strokeDashoffset={150 - (150 * progress) / 100}
             strokeLinecap="round"
-            className="transition-all duration-200"
+            className="transition-all duration-150 ease-out"
           />
         </svg>
 
@@ -94,9 +94,9 @@ const ScrollToTop = () => {
             group-hover:text-[#0D6E4F]
             transition-all duration-300
             relative z-10
-            animate-[pulse_2.5s_ease-in-out_infinite]
           "
         />
+
       </button>
     </div>
   );

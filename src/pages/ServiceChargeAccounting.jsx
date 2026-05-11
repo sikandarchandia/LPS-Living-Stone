@@ -36,7 +36,7 @@ const ServiceChargeAccounting = () => {
             Service Charge Accounting
           </h1>
 
-          <p className="mt-6 text-[#6B7280] text-lg md:text-xl leading-8 max-w-3xl mx-auto">
+          <p className="mt-6 text-[#0D6E4F] text-lg md:text-xl leading-8 max-w-3xl mx-auto">
             Leading specialists in service charge accounting for residential and
             commercial properties across London and the UK.
           </p>
@@ -47,7 +47,7 @@ const ServiceChargeAccounting = () => {
       {/* ================= INTRO ================= */}
       <section className="py-14 bg-white">
 
-        <div className="max-w-5xl mx-auto px-6 text-[#6B7280] text-base leading-8">
+        <div className="max-w-5xl mx-auto px-6 text-[#0D2040] text-base leading-8">
 
           <p>
             We are recognised specialists in service charge accounting, supporting
@@ -55,7 +55,7 @@ const ServiceChargeAccounting = () => {
             blocks to large managing agents.
           </p>
 
-          <p className="mt-5">
+          <p className="mt-5 text-[#0D6E4F] font-medium">
             We currently support over <b className="text-[#0D2040]">600+ service charge clients</b>
             nationwide with accuracy, compliance, and transparent reporting.
           </p>
@@ -92,7 +92,7 @@ const ServiceChargeAccounting = () => {
               Complete Service Charge Solutions
             </h2>
 
-            <p className="mt-4 text-[#6B7280] leading-7">
+            <p className="mt-4 text-[#0D6E4F] leading-7">
               End-to-end accounting solutions designed for landlords, managing agents,
               and property professionals.
             </p>
@@ -107,13 +107,16 @@ const ServiceChargeAccounting = () => {
                     bg-white
                     border border-[#E5E7EB]
                     p-5 rounded-2xl
+                    hover:bg-[#0D6E4F]/5
+                    hover:border-[#0D6E4F]
                     hover:shadow-md
                     transition-all duration-300
+                    cursor-pointer
                   "
                 >
                   <CheckCircle2 className="text-[#0D6E4F] mt-1" size={18} />
 
-                  <span className="text-[#0D2040] text-base leading-7 font-medium">
+                  <span className="text-[#0D2040] text-base leading-7 font-medium group-hover:text-[#0D6E4F]">
                     {item}
                   </span>
 
@@ -130,13 +133,13 @@ const ServiceChargeAccounting = () => {
       {/* ================= GUIDANCE ================= */}
       <section className="py-20 bg-white border-t border-[#E5E7EB]">
 
-        <div className="max-w-5xl mx-auto px-6 space-y-12 text-[#6B7280] text-base leading-8">
+        <div className="max-w-5xl mx-auto px-6 space-y-12 text-[#0D2040] text-base leading-8">
 
           <div>
             <h3 className="text-2xl font-black text-[#0D2040] mb-3">
               Guidance & Standards
             </h3>
-            <p>
+            <p className="text-[#0D6E4F]">
               Accounting and reporting is prepared in line with industry standards issued by
               ACCA, ICAEW, ICAS, ARMA, and RICS.
             </p>
@@ -146,11 +149,11 @@ const ServiceChargeAccounting = () => {
             <h3 className="text-2xl font-black text-[#0D2040] mb-3">
               Legal Framework
             </h3>
-            <ul className="list-disc pl-6 space-y-2">
-              <li>Landlord and Tenant Act 1985</li>
-              <li>Landlord and Tenant Act 1987</li>
-              <li>Commonhold and Leasehold Reform Act 2002</li>
-              <li>Service Charge Management Code (2009)</li>
+            <ul className="list-disc pl-6 space-y-2 text-[#0D2040]">
+              <li className="hover:text-[#0D6E4F] transition">Landlord and Tenant Act 1985</li>
+              <li className="hover:text-[#0D6E4F] transition">Landlord and Tenant Act 1987</li>
+              <li className="hover:text-[#0D6E4F] transition">Commonhold and Leasehold Reform Act 2002</li>
+              <li className="hover:text-[#0D6E4F] transition">Service Charge Management Code (2009)</li>
             </ul>
           </div>
 
@@ -158,7 +161,7 @@ const ServiceChargeAccounting = () => {
             <h3 className="text-2xl font-black text-[#0D2040] mb-3">
               Tribunal Support
             </h3>
-            <p>
+            <p className="text-[#0D6E4F]">
               We assist landlords and managing agents in interpreting tribunal decisions
               and ensuring compliance with lease obligations.
             </p>
@@ -178,7 +181,7 @@ const ServiceChargeAccounting = () => {
             Need Expert Service Charge Support?
           </h2>
 
-          <p className="mt-6 text-white/75 text-lg leading-7">
+          <p className="mt-6 text-white/80 text-lg leading-7">
             Speak to our specialists for accurate, compliant and efficient reporting.
           </p>
 
